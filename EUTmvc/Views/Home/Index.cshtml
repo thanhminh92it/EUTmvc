@@ -1,0 +1,28 @@
+﻿@model List<EUTmvc.Models.tblNew>
+
+@{
+    ViewBag.Title = "Trang Chủ";
+}
+
+<div class="col-md-12">
+    <div class="page-header" style="color: #00918d;">
+        <h2>Tin Tức</h2>
+    </div>
+    <div class="row" style="text-align: center">
+        @foreach (var item in Model)
+        {
+            <div class="nn-prod-box">
+                <div class="nn-prod-name">
+                    <a href="/Home/News/@item.Id">
+                        <h5>
+                            @Html.Raw(item.Title)
+                        </h5>
+                    </a>
+                </div>
+                <a href="/Home/News/@item.Id">
+                    <img class="nn-prod-image" src="/Uploads/images/News/@item.Image" title="@item.Title">
+                </a>
+            </div>
+        }
+    </div>
+</div>

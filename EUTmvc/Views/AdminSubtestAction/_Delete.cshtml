@@ -1,0 +1,63 @@
+﻿@model EUTmvc.Models.Admin.AdminSubTestDeleteAction
+<style type="text/css">
+        .alert-error {
+            background-color: #f2dede;
+            border-color: #eed3d7;
+            color: #b94a48;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+    </style>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Sửa thông tin môn thi</h4>
+</div>
+@using (Html.BeginForm())
+{
+    <div class="modal-body">
+
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(mode=>Model.Id)
+            @if (ViewBag.Message != null)
+            {   
+                <div class="form-group">
+                    <div class="alert alert-error">
+                        <a class="close" data-dismiss="alert" href="#">×</a>@Html.Raw(ViewBag.Message.ToString())
+                    </div>
+                </div>
+            }
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DisplayFor(model => model.Name, new { @class = "form-control"})
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Time, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DisplayFor(model => model.Time ,new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.QuestionNumber, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DisplayFor(model => model.QuestionNumber, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DisplayFor(model => model.Description, new { @class = "form-control" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" type="button" data-dismiss="modal">Cancel</button>
+        <input class="btn btn-primary" type="submit" value="Save" />
+    </div>
+}

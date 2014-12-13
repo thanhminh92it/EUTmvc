@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "StateList";
+}
+<input id="btnGetPersons" type="button" value="Get Persons" />
+<div>
+    <div id="ajaxDiv">
+    </div>
+    <select id="stateList">
+        <option>1</option>
+    </select>
+    <input id="txt" type="text" />
+    <div id="lbl"></div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var dropdownList = $("#stateList");
+        $('#btnGetPersons').click(function () {
+            $.getJSON("/Home/GetonData", null, function (data) {
+                var div = $('#ajaxDiv');
+                div.html("<br/> " + "Persons received from server: " + "<br/>");
+                $.each(data, function (i, item) {
+                    printPerson(div, item);
+
+                });
+                dropdownList.fillSelect(dropdownList, data);
+            })
+            .error(function () {
+                alert('error');
+            });
+        });
+        dropdownList.change(function () {
+            $('#lbl').text(dropdownList.val());
+        });
+    });
+
+    function printPerson(div, item) {
+        div.append("<br/>" + "FName: " + item.Value + ", LName: " + item.Text);
+    }
+    $.fn.clearSelect = function () {
+        return this.each(function () {
+            if (this.tagName == 'SELECT')
+                this.options.length = 0;
+        });
+    }
+
+    $.fn.fillSelect = function (dropdownList, data) {
+        return this.clearSelect().each(function () {
+            if (this.tagName == 'SELECT') {
+                //dropdownList.append('<option val="1">One</option>');
+                $.each(data, function (i, item) {
+                    dropdownList.append($('<option>', {
+                        value: item.Value,
+                        text: item.Text
+                    }));
+                });
+            }
+        });
+    }
+</script>

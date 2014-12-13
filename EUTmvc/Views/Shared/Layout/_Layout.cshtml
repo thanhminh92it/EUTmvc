@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/bootstrap/datepicker")
+
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/DatepickerJavaScript.js"></script>
+    <link href="~/Content/justified-nav.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container" style="max-width: 1024px;">
+
+        <div class="masthead">
+            <div class="art-header"></div>
+            <ul class="nav nav-justified">
+                @*<li class="active"><a href="#">Home</a></li>*@
+                <li><a href="/Home/">Trang Chủ</a></li>
+                <li><a href="/Introduction/">Giới Thiệu</a></li>
+                <li><a href="#">Giáo Viên</a></li>
+                <li><a href="#">Bài Học</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Thi<span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="/Exam/Learn">Luyện Tập</a></li>
+                        <li><a href="/Exam/">Thi Thử</a></li>
+                        <li><a href="#">Thi Đấu</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Liên Hệ</a></li>
+                <li><a href="#">Góp Ý</a></li>
+                <li class="dropdown">
+                    @Html.Partial("Parital/_account")
+                </li>
+            </ul>
+        </div>
+
+        <!-- Jumbotron -->
+
+
+        <!-- Example row of columns -->
+        <div class="row row_layout">
+            <div class="col-xs-12">
+                <div class="form-horizontal">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+        <!-- Site footer -->
+        <div class="footer">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img src="~/Images/logo_epu.png" />
+                </div>
+                <div class="col-xs-6 footer-col">
+                    <div class="form-group">
+                        <h4>TRƯỜNG ĐẠI HỌC ĐIỆN LỰC</h4>
+                        <span>Địa chỉ: 235 Hoàng Quốc Việt, Từ Liêm, Hà Nội</span>
+                        <br />
+                        <span>Điện thoại: (043) 442 121</span> | <span>Fax: (043) 233 133</span>
+                        <br />
+                        <span>Website: <a href="http://www.epu.edu.vn">www.epu.edu.vn</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

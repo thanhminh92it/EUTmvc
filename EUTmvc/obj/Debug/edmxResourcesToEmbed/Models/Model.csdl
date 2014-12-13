@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DoAnModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="DoAnEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="DoAnModel.sysdiagram" />
+    <EntitySet Name="tblCauHois" EntityType="DoAnModel.tblCauHoi" />
+    <EntitySet Name="tblCauTrucDeThis" EntityType="DoAnModel.tblCauTrucDeThi" />
+    <EntitySet Name="tblChuongs" EntityType="DoAnModel.tblChuong" />
+    <EntitySet Name="tblConNguois" EntityType="DoAnModel.tblConNguoi" />
+    <EntitySet Name="tblDeThis" EntityType="DoAnModel.tblDeThi" />
+    <EntitySet Name="tblDoKhoes" EntityType="DoAnModel.tblDoKho" />
+    <EntitySet Name="tblGoiYDeThis" EntityType="DoAnModel.tblGoiYDeThi" />
+    <EntitySet Name="tblHocVis" EntityType="DoAnModel.tblHocVi" />
+    <EntitySet Name="tblHuyens" EntityType="DoAnModel.tblHuyen" />
+    <EntitySet Name="tblKetQuaThis" EntityType="DoAnModel.tblKetQuaThi" />
+    <EntitySet Name="tblKhuVucs" EntityType="DoAnModel.tblKhuVuc" />
+    <EntitySet Name="tblLienKetNoiDungs" EntityType="DoAnModel.tblLienKetNoiDung" />
+    <EntitySet Name="tblMonThis" EntityType="DoAnModel.tblMonThi" />
+    <EntitySet Name="tblNhomTaiKhoans" EntityType="DoAnModel.tblNhomTaiKhoan" />
+    <EntitySet Name="tblNoiDungCauTrucs" EntityType="DoAnModel.tblNoiDungCauTruc" />
+    <EntitySet Name="tblNoiDungDeThis" EntityType="DoAnModel.tblNoiDungDeThi" />
+    <EntitySet Name="tblQuyens" EntityType="DoAnModel.tblQuyen" />
+    <EntitySet Name="tblTaiKhoans" EntityType="DoAnModel.tblTaiKhoan" />
+    <EntitySet Name="tblTinhThanhs" EntityType="DoAnModel.tblTinhThanh" />
+    <EntitySet Name="tblTruongs" EntityType="DoAnModel.tblTruong" />
+    <AssociationSet Name="FK_CauHoi_Chuong" Association="DoAnModel.FK_CauHoi_Chuong">
+      <End Role="tblChuong" EntitySet="tblChuongs" />
+      <End Role="tblCauHoi" EntitySet="tblCauHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CauHoi_DoKho" Association="DoAnModel.FK_CauHoi_DoKho">
+      <End Role="tblDoKho" EntitySet="tblDoKhoes" />
+      <End Role="tblCauHoi" EntitySet="tblCauHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LienKetNoiDung_CauHoi" Association="DoAnModel.FK_LienKetNoiDung_CauHoi">
+      <End Role="tblCauHoi" EntitySet="tblCauHois" />
+      <End Role="tblLienKetNoiDung" EntitySet="tblLienKetNoiDungs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NoiDungDeThi_CauHoi" Association="DoAnModel.FK_NoiDungDeThi_CauHoi">
+      <End Role="tblCauHoi" EntitySet="tblCauHois" />
+      <End Role="tblNoiDungDeThi" EntitySet="tblNoiDungDeThis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CauTrucDeThi_MonThi" Association="DoAnModel.FK_CauTrucDeThi_MonThi">
+      <End Role="tblMonThi" EntitySet="tblMonThis" />
+      <End Role="tblCauTrucDeThi" EntitySet="tblCauTrucDeThis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeThi_CauTrucDeThi" Association="DoAnModel.FK_DeThi_CauTrucDeThi">
+      <End Role="tblCauTrucDeThi" EntitySet="tblCauTrucDeThis" />
+      <End Role="tblDeThi" EntitySet="tblDeThis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NoiDungCauTruc_CauTrucDeThi" Association="DoAnModel.FK_NoiDungCauTruc_CauTrucDeThi">
+      <End Role="tblCauTrucDeThi" EntitySet="tblCauTrucDeThis" />
+      <End Role="tblNoiDungCauTruc" EntitySet="tblNoiDungCauTrucs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Chuong_MonThi" Association="DoAnModel.FK_Chuong_MonThi">
+      <End Role="tblMonThi" EntitySet="tblMonThis" />
+      <End Role="tblChuong" EntitySet="tblChuongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NoiDungCauTruc_Chuong" Association="DoAnModel.FK_NoiDungCauTruc_Chuong">
+      <End Role="tblChuong" EntitySet="tblChuongs" />
+      <End Role="tblNoiDungCauTruc" EntitySet="tblNoiDungCauTrucs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConNguoi_HocVi" Association="DoAnModel.FK_ConNguoi_HocVi">
+      <End Role="tblHocVi" EntitySet="tblHocVis" />
+      <End Role="tblConNguoi" EntitySet="tblConNguois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConNguoi_Truong" Association="DoAnModel.FK_ConNguoi_Truong">
+      <End Role="tblTruong" EntitySet="tblTruongs" />
+      <End Role="tblConNguoi" EntitySet="tblConNguois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaiKhoan_ConNguoi" Association="DoAnModel.FK_TaiKhoan_ConNguoi">
+      <End Role="tblConNguoi" EntitySet="tblConNguois" />
+      <End Role="tblTaiKhoan" EntitySet="tblTaiKhoans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KetQuaThi_DeThi" Association="DoAnModel.FK_KetQuaThi_DeThi">
+      <End Role="tblDeThi" EntitySet="tblDeThis" />
+      <End Role="tblKetQuaThi" EntitySet="tblKetQuaThis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NoiDungDeThi_DeThi" Association="DoAnModel.FK_NoiDungDeThi_DeThi">
+      <End Role="tblDeThi" EntitySet="tblDeThis" />
+      <End Role="tblNoiDungDeThi" EntitySet="tblNoiDungDeThis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LienKetNoiDung_GoiYDeThi" Association="DoAnModel.FK_LienKetNoiDung_GoiYDeThi">
+      <End Role="tblGoiYDeThi" EntitySet="tblGoiYDeThis" />
+      <End Role="tblLienKetNoiDung" EntitySet="tblLienKetNoiDungs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Huyen_TinhThanh" Association="DoAnModel.FK_Huyen_TinhThanh">
+      <End Role="tblTinhThanh" EntitySet="tblTinhThanhs" />
+      <End Role="tblHuyen" EntitySet="tblHuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TruongTHPT_Huyen" Association="DoAnModel.FK_TruongTHPT_Huyen">
+      <End Role="tblHuyen" EntitySet="tblHuyens" />
+      <End Role="tblTruong" EntitySet="tblTruongs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KetQuaThi_TaiKhoan" Association="DoAnModel.FK_KetQuaThi_TaiKhoan">
+      <End Role="tblTaiKhoan" EntitySet="tblTaiKhoans" />
+      <End Role="tblKetQuaThi" EntitySet="tblKetQuaThis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TinhThanh_KhuVuc" Association="DoAnModel.FK_TinhThanh_KhuVuc">
+      <End Role="tblKhuVuc" EntitySet="tblKhuVucs" />
+      <End Role="tblTinhThanh" EntitySet="tblTinhThanhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Quyen_NhomTaiKhoan" Association="DoAnModel.FK_Quyen_NhomTaiKhoan">
+      <End Role="tblNhomTaiKhoan" EntitySet="tblNhomTaiKhoans" />
+      <End Role="tblQuyen" EntitySet="tblQuyens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaiKhoan_NhomTaiKhoan" Association="DoAnModel.FK_TaiKhoan_NhomTaiKhoan">
+      <End Role="tblNhomTaiKhoan" EntitySet="tblNhomTaiKhoans" />
+      <End Role="tblTaiKhoan" EntitySet="tblTaiKhoans" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblCauHoi">
+    <Key>
+      <PropertyRef Name="IDCauHoi" />
+    </Key>
+    <Property Name="IDCauHoi" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDChuong" Type="Int32" Nullable="false" />
+    <Property Name="CauHoi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Da_A" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Da_B" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Da_C" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Da_D" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DA" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="IDDoKho" Type="Int32" Nullable="false" />
+    <Property Name="LoiGiai" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="NguoiTao" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+    <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NguoiSua" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySua" Type="DateTime" Precision="3" />
+    <Property Name="SoLanSua" Type="Int32" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblChuong" Relationship="DoAnModel.FK_CauHoi_Chuong" FromRole="tblCauHoi" ToRole="tblChuong" />
+    <NavigationProperty Name="tblDoKho" Relationship="DoAnModel.FK_CauHoi_DoKho" FromRole="tblCauHoi" ToRole="tblDoKho" />
+    <NavigationProperty Name="tblLienKetNoiDungs" Relationship="DoAnModel.FK_LienKetNoiDung_CauHoi" FromRole="tblCauHoi" ToRole="tblLienKetNoiDung" />
+    <NavigationProperty Name="tblNoiDungDeThis" Relationship="DoAnModel.FK_NoiDungDeThi_CauHoi" FromRole="tblCauHoi" ToRole="tblNoiDungDeThi" />
+  </EntityType>
+  <EntityType Name="tblCauTrucDeThi">
+    <Key>
+      <PropertyRef Name="IDCauTruc" />
+    </Key>
+    <Property Name="IDCauTruc" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDMonThi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblMonThi" Relationship="DoAnModel.FK_CauTrucDeThi_MonThi" FromRole="tblCauTrucDeThi" ToRole="tblMonThi" />
+    <NavigationProperty Name="tblDeThis" Relationship="DoAnModel.FK_DeThi_CauTrucDeThi" FromRole="tblCauTrucDeThi" ToRole="tblDeThi" />
+    <NavigationProperty Name="tblNoiDungCauTrucs" Relationship="DoAnModel.FK_NoiDungCauTruc_CauTrucDeThi" FromRole="tblCauTrucDeThi" ToRole="tblNoiDungCauTruc" />
+  </EntityType>
+  <EntityType Name="tblChuong">
+    <Key>
+      <PropertyRef Name="IDChuong" />
+    </Key>
+    <Property Name="IDChuong" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDMonThi" Type="Int32" Nullable="false" />
+    <Property Name="TenChuong" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblCauHois" Relationship="DoAnModel.FK_CauHoi_Chuong" FromRole="tblChuong" ToRole="tblCauHoi" />
+    <NavigationProperty Name="tblMonThi" Relationship="DoAnModel.FK_Chuong_MonThi" FromRole="tblChuong" ToRole="tblMonThi" />
+    <NavigationProperty Name="tblNoiDungCauTrucs" Relationship="DoAnModel.FK_NoiDungCauTruc_Chuong" FromRole="tblChuong" ToRole="tblNoiDungCauTruc" />
+  </EntityType>
+  <EntityType Name="tblConNguoi">
+    <Key>
+      <PropertyRef Name="IDConNguoi" />
+    </Key>
+    <Property Name="IDConNguoi" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="HoDem" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Ten" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="GioiTinh" Type="Boolean" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DienThoai" Type="String" MaxLength="11" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgheNghiep" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="IDHocVi" Type="Int32" />
+    <Property Name="IDTruong" Type="Int32" />
+    <NavigationProperty Name="tblHocVi" Relationship="DoAnModel.FK_ConNguoi_HocVi" FromRole="tblConNguoi" ToRole="tblHocVi" />
+    <NavigationProperty Name="tblTruong" Relationship="DoAnModel.FK_ConNguoi_Truong" FromRole="tblConNguoi" ToRole="tblTruong" />
+    <NavigationProperty Name="tblTaiKhoans" Relationship="DoAnModel.FK_TaiKhoan_ConNguoi" FromRole="tblConNguoi" ToRole="tblTaiKhoan" />
+  </EntityType>
+  <EntityType Name="tblDeThi">
+    <Key>
+      <PropertyRef Name="IDDeThi" />
+    </Key>
+    <Property Name="IDDeThi" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCauTruc" Type="Int32" Nullable="false" />
+    <Property Name="IDDeThiGoc" Type="Int32" Nullable="false" />
+    <Property Name="NguoiTao" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+    <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NguoiSua" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySua" Type="DateTime" Precision="3" />
+    <Property Name="SoLanSua" Type="Int32" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblCauTrucDeThi" Relationship="DoAnModel.FK_DeThi_CauTrucDeThi" FromRole="tblDeThi" ToRole="tblCauTrucDeThi" />
+    <NavigationProperty Name="tblKetQuaThis" Relationship="DoAnModel.FK_KetQuaThi_DeThi" FromRole="tblDeThi" ToRole="tblKetQuaThi" />
+    <NavigationProperty Name="tblNoiDungDeThis" Relationship="DoAnModel.FK_NoiDungDeThi_DeThi" FromRole="tblDeThi" ToRole="tblNoiDungDeThi" />
+  </EntityType>
+  <EntityType Name="tblDoKho">
+    <Key>
+      <PropertyRef Name="IDDoKho" />
+    </Key>
+    <Property Name="IDDoKho" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="DoKho" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblCauHois" Relationship="DoAnModel.FK_CauHoi_DoKho" FromRole="tblDoKho" ToRole="tblCauHoi" />
+  </EntityType>
+  <EntityType Name="tblGoiYDeThi">
+    <Key>
+      <PropertyRef Name="IDGoiY" />
+    </Key>
+    <Property Name="IDGoiY" Type="Int32" Nullable="false" />
+    <Property Name="NoiDung" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblLienKetNoiDungs" Relationship="DoAnModel.FK_LienKetNoiDung_GoiYDeThi" FromRole="tblGoiYDeThi" ToRole="tblLienKetNoiDung" />
+  </EntityType>
+  <EntityType Name="tblHocVi">
+    <Key>
+      <PropertyRef Name="IDHocVi" />
+    </Key>
+    <Property Name="IDHocVi" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="HocVi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblConNguois" Relationship="DoAnModel.FK_ConNguoi_HocVi" FromRole="tblHocVi" ToRole="tblConNguoi" />
+  </EntityType>
+  <EntityType Name="tblHuyen">
+    <Key>
+      <PropertyRef Name="IDHuyen" />
+    </Key>
+    <Property Name="IDHuyen" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenHuyen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IDTinhThanh" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblTinhThanh" Relationship="DoAnModel.FK_Huyen_TinhThanh" FromRole="tblHuyen" ToRole="tblTinhThanh" />
+    <NavigationProperty Name="tblTruongs" Relationship="DoAnModel.FK_TruongTHPT_Huyen" FromRole="tblHuyen" ToRole="tblTruong" />
+  </EntityType>
+  <EntityType Name="tblKetQuaThi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TaiKhoan" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="IDDeThi" Type="Int32" Nullable="false" />
+    <Property Name="ThoiGianThi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ThoiGianNop" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Diem" Type="Double" Nullable="false" />
+    <Property Name="DapAnDaChon" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblDeThi" Relationship="DoAnModel.FK_KetQuaThi_DeThi" FromRole="tblKetQuaThi" ToRole="tblDeThi" />
+    <NavigationProperty Name="tblTaiKhoan" Relationship="DoAnModel.FK_KetQuaThi_TaiKhoan" FromRole="tblKetQuaThi" ToRole="tblTaiKhoan" />
+  </EntityType>
+  <EntityType Name="tblKhuVuc">
+    <Key>
+      <PropertyRef Name="IDKhuVuc" />
+    </Key>
+    <Property Name="IDKhuVuc" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKhuVuc" Type="String" Nullable="false" MaxLength="11" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblTinhThanhs" Relationship="DoAnModel.FK_TinhThanh_KhuVuc" FromRole="tblKhuVuc" ToRole="tblTinhThanh" />
+  </EntityType>
+  <EntityType Name="tblLienKetNoiDung">
+    <Key>
+      <PropertyRef Name="IDLienKet" />
+    </Key>
+    <Property Name="IDLienKet" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDGoiY" Type="Int32" Nullable="false" />
+    <Property Name="IDCauHoi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblCauHoi" Relationship="DoAnModel.FK_LienKetNoiDung_CauHoi" FromRole="tblLienKetNoiDung" ToRole="tblCauHoi" />
+    <NavigationProperty Name="tblGoiYDeThi" Relationship="DoAnModel.FK_LienKetNoiDung_GoiYDeThi" FromRole="tblLienKetNoiDung" ToRole="tblGoiYDeThi" />
+  </EntityType>
+  <EntityType Name="tblMonThi">
+    <Key>
+      <PropertyRef Name="IDMonThi" />
+    </Key>
+    <Property Name="IDMonThi" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MonThi" Type="Int32" Nullable="false" />
+    <Property Name="ThoiGian" Type="Int32" Nullable="false" />
+    <Property Name="SoCauHoi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblCauTrucDeThis" Relationship="DoAnModel.FK_CauTrucDeThi_MonThi" FromRole="tblMonThi" ToRole="tblCauTrucDeThi" />
+    <NavigationProperty Name="tblChuongs" Relationship="DoAnModel.FK_Chuong_MonThi" FromRole="tblMonThi" ToRole="tblChuong" />
+  </EntityType>
+  <EntityType Name="tblNhomTaiKhoan">
+    <Key>
+      <PropertyRef Name="IDNhom" />
+    </Key>
+    <Property Name="IDNhom" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblQuyens" Relationship="DoAnModel.FK_Quyen_NhomTaiKhoan" FromRole="tblNhomTaiKhoan" ToRole="tblQuyen" />
+    <NavigationProperty Name="tblTaiKhoans" Relationship="DoAnModel.FK_TaiKhoan_NhomTaiKhoan" FromRole="tblNhomTaiKhoan" ToRole="tblTaiKhoan" />
+  </EntityType>
+  <EntityType Name="tblNoiDungCauTruc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDCauTruc" Type="Int32" Nullable="false" />
+    <Property Name="IDChuong" Type="Int32" Nullable="false" />
+    <Property Name="SoCauHoiDe" Type="Int32" Nullable="false" />
+    <Property Name="SoCauHoiTB" Type="Int32" Nullable="false" />
+    <Property Name="SoCauHoiKho" Type="Int32" Nullable="false" />
+    <Property Name="SoCauHoiChuong" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblCauTrucDeThi" Relationship="DoAnModel.FK_NoiDungCauTruc_CauTrucDeThi" FromRole="tblNoiDungCauTruc" ToRole="tblCauTrucDeThi" />
+    <NavigationProperty Name="tblChuong" Relationship="DoAnModel.FK_NoiDungCauTruc_Chuong" FromRole="tblNoiDungCauTruc" ToRole="tblChuong" />
+  </EntityType>
+  <EntityType Name="tblNoiDungDeThi">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDeThi" Type="Int32" Nullable="false" />
+    <Property Name="CauSo" Type="Int32" Nullable="false" />
+    <Property Name="IDCauhoi" Type="Int32" Nullable="false" />
+    <Property Name="ThuTuDA" Type="String" Nullable="false" MaxLength="4" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblCauHoi" Relationship="DoAnModel.FK_NoiDungDeThi_CauHoi" FromRole="tblNoiDungDeThi" ToRole="tblCauHoi" />
+    <NavigationProperty Name="tblDeThi" Relationship="DoAnModel.FK_NoiDungDeThi_DeThi" FromRole="tblNoiDungDeThi" ToRole="tblDeThi" />
+  </EntityType>
+  <EntityType Name="tblQuyen">
+    <Key>
+      <PropertyRef Name="IDQuyen" />
+    </Key>
+    <Property Name="IDQuyen" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenQuyen" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IDNhom" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblNhomTaiKhoan" Relationship="DoAnModel.FK_Quyen_NhomTaiKhoan" FromRole="tblQuyen" ToRole="tblNhomTaiKhoan" />
+  </EntityType>
+  <EntityType Name="tblTaiKhoan">
+    <Key>
+      <PropertyRef Name="IDTaiKhoan" />
+    </Key>
+    <Property Name="IDTaiKhoan" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <Property Name="ThoiGianCuoi" Type="DateTime" Precision="3" />
+    <Property Name="IDNhom" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDConNguoi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblConNguoi" Relationship="DoAnModel.FK_TaiKhoan_ConNguoi" FromRole="tblTaiKhoan" ToRole="tblConNguoi" />
+    <NavigationProperty Name="tblKetQuaThis" Relationship="DoAnModel.FK_KetQuaThi_TaiKhoan" FromRole="tblTaiKhoan" ToRole="tblKetQuaThi" />
+    <NavigationProperty Name="tblNhomTaiKhoan" Relationship="DoAnModel.FK_TaiKhoan_NhomTaiKhoan" FromRole="tblTaiKhoan" ToRole="tblNhomTaiKhoan" />
+  </EntityType>
+  <EntityType Name="tblTinhThanh">
+    <Key>
+      <PropertyRef Name="IDTinhThanh" />
+    </Key>
+    <Property Name="IDTinhThanh" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTinhThanh" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="IDKhuVuc" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblHuyens" Relationship="DoAnModel.FK_Huyen_TinhThanh" FromRole="tblTinhThanh" ToRole="tblHuyen" />
+    <NavigationProperty Name="tblKhuVuc" Relationship="DoAnModel.FK_TinhThanh_KhuVuc" FromRole="tblTinhThanh" ToRole="tblKhuVuc" />
+  </EntityType>
+  <EntityType Name="tblTruong">
+    <Key>
+      <PropertyRef Name="IDTruong" />
+    </Key>
+    <Property Name="IDTruong" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTruong" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChiXa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IDHuyen" Type="Int32" Nullable="false" />
+    <Property Name="DienThoai" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Website" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblConNguois" Relationship="DoAnModel.FK_ConNguoi_Truong" FromRole="tblTruong" ToRole="tblConNguoi" />
+    <NavigationProperty Name="tblHuyen" Relationship="DoAnModel.FK_TruongTHPT_Huyen" FromRole="tblTruong" ToRole="tblHuyen" />
+  </EntityType>
+  <Association Name="FK_CauHoi_Chuong">
+    <End Role="tblChuong" Type="DoAnModel.tblChuong" Multiplicity="1" />
+    <End Role="tblCauHoi" Type="DoAnModel.tblCauHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChuong">
+        <PropertyRef Name="IDChuong" />
+      </Principal>
+      <Dependent Role="tblCauHoi">
+        <PropertyRef Name="IDChuong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CauHoi_DoKho">
+    <End Role="tblDoKho" Type="DoAnModel.tblDoKho" Multiplicity="1" />
+    <End Role="tblCauHoi" Type="DoAnModel.tblCauHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDoKho">
+        <PropertyRef Name="IDDoKho" />
+      </Principal>
+      <Dependent Role="tblCauHoi">
+        <PropertyRef Name="IDDoKho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LienKetNoiDung_CauHoi">
+    <End Role="tblCauHoi" Type="DoAnModel.tblCauHoi" Multiplicity="1" />
+    <End Role="tblLienKetNoiDung" Type="DoAnModel.tblLienKetNoiDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCauHoi">
+        <PropertyRef Name="IDCauHoi" />
+      </Principal>
+      <Dependent Role="tblLienKetNoiDung">
+        <PropertyRef Name="IDCauHoi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NoiDungDeThi_CauHoi">
+    <End Role="tblCauHoi" Type="DoAnModel.tblCauHoi" Multiplicity="1" />
+    <End Role="tblNoiDungDeThi" Type="DoAnModel.tblNoiDungDeThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCauHoi">
+        <PropertyRef Name="IDCauHoi" />
+      </Principal>
+      <Dependent Role="tblNoiDungDeThi">
+        <PropertyRef Name="IDCauhoi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CauTrucDeThi_MonThi">
+    <End Role="tblMonThi" Type="DoAnModel.tblMonThi" Multiplicity="1" />
+    <End Role="tblCauTrucDeThi" Type="DoAnModel.tblCauTrucDeThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMonThi">
+        <PropertyRef Name="IDMonThi" />
+      </Principal>
+      <Dependent Role="tblCauTrucDeThi">
+        <PropertyRef Name="IDMonThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeThi_CauTrucDeThi">
+    <End Role="tblCauTrucDeThi" Type="DoAnModel.tblCauTrucDeThi" Multiplicity="1" />
+    <End Role="tblDeThi" Type="DoAnModel.tblDeThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCauTrucDeThi">
+        <PropertyRef Name="IDCauTruc" />
+      </Principal>
+      <Dependent Role="tblDeThi">
+        <PropertyRef Name="IDCauTruc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NoiDungCauTruc_CauTrucDeThi">
+    <End Role="tblCauTrucDeThi" Type="DoAnModel.tblCauTrucDeThi" Multiplicity="1" />
+    <End Role="tblNoiDungCauTruc" Type="DoAnModel.tblNoiDungCauTruc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCauTrucDeThi">
+        <PropertyRef Name="IDCauTruc" />
+      </Principal>
+      <Dependent Role="tblNoiDungCauTruc">
+        <PropertyRef Name="IDCauTruc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Chuong_MonThi">
+    <End Role="tblMonThi" Type="DoAnModel.tblMonThi" Multiplicity="1" />
+    <End Role="tblChuong" Type="DoAnModel.tblChuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMonThi">
+        <PropertyRef Name="IDMonThi" />
+      </Principal>
+      <Dependent Role="tblChuong">
+        <PropertyRef Name="IDMonThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NoiDungCauTruc_Chuong">
+    <End Role="tblChuong" Type="DoAnModel.tblChuong" Multiplicity="1" />
+    <End Role="tblNoiDungCauTruc" Type="DoAnModel.tblNoiDungCauTruc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChuong">
+        <PropertyRef Name="IDChuong" />
+      </Principal>
+      <Dependent Role="tblNoiDungCauTruc">
+        <PropertyRef Name="IDChuong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConNguoi_HocVi">
+    <End Role="tblHocVi" Type="DoAnModel.tblHocVi" Multiplicity="0..1" />
+    <End Role="tblConNguoi" Type="DoAnModel.tblConNguoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHocVi">
+        <PropertyRef Name="IDHocVi" />
+      </Principal>
+      <Dependent Role="tblConNguoi">
+        <PropertyRef Name="IDHocVi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConNguoi_Truong">
+    <End Role="tblTruong" Type="DoAnModel.tblTruong" Multiplicity="0..1" />
+    <End Role="tblConNguoi" Type="DoAnModel.tblConNguoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTruong">
+        <PropertyRef Name="IDTruong" />
+      </Principal>
+      <Dependent Role="tblConNguoi">
+        <PropertyRef Name="IDTruong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaiKhoan_ConNguoi">
+    <End Role="tblConNguoi" Type="DoAnModel.tblConNguoi" Multiplicity="1" />
+    <End Role="tblTaiKhoan" Type="DoAnModel.tblTaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblConNguoi">
+        <PropertyRef Name="IDConNguoi" />
+      </Principal>
+      <Dependent Role="tblTaiKhoan">
+        <PropertyRef Name="IDConNguoi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KetQuaThi_DeThi">
+    <End Role="tblDeThi" Type="DoAnModel.tblDeThi" Multiplicity="1" />
+    <End Role="tblKetQuaThi" Type="DoAnModel.tblKetQuaThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDeThi">
+        <PropertyRef Name="IDDeThi" />
+      </Principal>
+      <Dependent Role="tblKetQuaThi">
+        <PropertyRef Name="IDDeThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NoiDungDeThi_DeThi">
+    <End Role="tblDeThi" Type="DoAnModel.tblDeThi" Multiplicity="1" />
+    <End Role="tblNoiDungDeThi" Type="DoAnModel.tblNoiDungDeThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDeThi">
+        <PropertyRef Name="IDDeThi" />
+      </Principal>
+      <Dependent Role="tblNoiDungDeThi">
+        <PropertyRef Name="IDDeThi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LienKetNoiDung_GoiYDeThi">
+    <End Role="tblGoiYDeThi" Type="DoAnModel.tblGoiYDeThi" Multiplicity="1" />
+    <End Role="tblLienKetNoiDung" Type="DoAnModel.tblLienKetNoiDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblGoiYDeThi">
+        <PropertyRef Name="IDGoiY" />
+      </Principal>
+      <Dependent Role="tblLienKetNoiDung">
+        <PropertyRef Name="IDGoiY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Huyen_TinhThanh">
+    <End Role="tblTinhThanh" Type="DoAnModel.tblTinhThanh" Multiplicity="1" />
+    <End Role="tblHuyen" Type="DoAnModel.tblHuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTinhThanh">
+        <PropertyRef Name="IDTinhThanh" />
+      </Principal>
+      <Dependent Role="tblHuyen">
+        <PropertyRef Name="IDTinhThanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TruongTHPT_Huyen">
+    <End Role="tblHuyen" Type="DoAnModel.tblHuyen" Multiplicity="1" />
+    <End Role="tblTruong" Type="DoAnModel.tblTruong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHuyen">
+        <PropertyRef Name="IDHuyen" />
+      </Principal>
+      <Dependent Role="tblTruong">
+        <PropertyRef Name="IDHuyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KetQuaThi_TaiKhoan">
+    <End Role="tblTaiKhoan" Type="DoAnModel.tblTaiKhoan" Multiplicity="1" />
+    <End Role="tblKetQuaThi" Type="DoAnModel.tblKetQuaThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTaiKhoan">
+        <PropertyRef Name="IDTaiKhoan" />
+      </Principal>
+      <Dependent Role="tblKetQuaThi">
+        <PropertyRef Name="TaiKhoan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TinhThanh_KhuVuc">
+    <End Role="tblKhuVuc" Type="DoAnModel.tblKhuVuc" Multiplicity="1" />
+    <End Role="tblTinhThanh" Type="DoAnModel.tblTinhThanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKhuVuc">
+        <PropertyRef Name="IDKhuVuc" />
+      </Principal>
+      <Dependent Role="tblTinhThanh">
+        <PropertyRef Name="IDKhuVuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Quyen_NhomTaiKhoan">
+    <End Role="tblNhomTaiKhoan" Type="DoAnModel.tblNhomTaiKhoan" Multiplicity="1" />
+    <End Role="tblQuyen" Type="DoAnModel.tblQuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNhomTaiKhoan">
+        <PropertyRef Name="IDNhom" />
+      </Principal>
+      <Dependent Role="tblQuyen">
+        <PropertyRef Name="IDNhom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaiKhoan_NhomTaiKhoan">
+    <End Role="tblNhomTaiKhoan" Type="DoAnModel.tblNhomTaiKhoan" Multiplicity="1" />
+    <End Role="tblTaiKhoan" Type="DoAnModel.tblTaiKhoan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNhomTaiKhoan">
+        <PropertyRef Name="IDNhom" />
+      </Principal>
+      <Dependent Role="tblTaiKhoan">
+        <PropertyRef Name="IDNhom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

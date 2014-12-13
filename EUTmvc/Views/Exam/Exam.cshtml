@@ -1,0 +1,83 @@
+﻿@model EUTmvc.Models.Evaluation
+@{
+    ViewBag.Title = "Thi";
+}
+@Styles.Render("~/Content/jquerycountdown")
+@Scripts.Render("~/bundles/jquerycountdown")
+<script src="~/Scripts/CountdownJavaScript.js"></script>
+<style>
+    #defaultCountdown {
+    }
+</style>
+<div>
+    @if (ViewBag.Message != null)
+    {
+        @Html.Raw(ViewBag.Message.ToString())
+    }
+    else
+    {
+        using (Html.BeginForm("TestResult", "Exam"))
+        {
+        <div class="col-xs-9">
+
+            <div class="col-lg-12" style="box-shadow: 0 0 5px gray; padding: 0 30px;">
+                <div class="form-group">
+                    <div class="page-header">
+                        <h3>Đề Thi</h3>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    @for (int i = 0; i < Model.Questions.Count; i++)
+                    {
+                        <div class="form-group">
+                            @Html.HiddenFor(x => Model.Questions[i].ID)
+                            <div class="question">
+                                <span style="font-size: 20px">Câu @Model.Questions[i].TheNumber :</span>
+                                @Model.Questions[i].QuestionText
+                            </div>
+                            <div class="answer">
+                                @foreach (var a in Model.Questions[i].Answers)
+                                {
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(b => Model.Questions[i].SelectedAnswer, a.code)
+                                            @a.code . @a.AnswerText
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <div class="col-md-5 col-md-offset-3">
+                        <button type="submit" class="btn btn-default">Nộp Bài</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div class="col-xs-3">
+                <div>
+                    @Html.HiddenFor(model=>model.ID)
+                </div>
+                <h3>Môn Thi : @Model.Subtests</h3>
+                <h4>Mã đề thi: @Model.ExamQuestionId</h4>
+                <h4>Thời gian làm bài : <span id="time">@Model.Time</span> phút
+                </h4>
+                <h4>Số câu hỏi : @Model.QuestionNumber</h4>
+                <div>
+                    <h4>Thời gian còn lại:
+                    </h4>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2">
+                        <div id="defaultCountdown"></div>
+                    </div>
+                
+                </div>
+            </div>
+
+        }
+    }
+</div>

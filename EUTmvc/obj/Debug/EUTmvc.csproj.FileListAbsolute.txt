@@ -1,0 +1,211 @@
+E:\Projects\EUTmvc\EUTmvc\bin\EUTmvc.dll
+E:\Projects\EUTmvc\EUTmvc\bin\EUTmvc.pdb
+E:\Projects\EUTmvc\EUTmvc\bin\Antlr3.Runtime.dll
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.dll
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.dll
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.dll
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.dll
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Projects\EUTmvc\EUTmvc\bin\EntityFramework.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Newtonsoft.Json.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Helpers.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Http.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Mvc.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Optimization.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Razor.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.WebPages.dll
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.dll
+E:\Projects\EUTmvc\EUTmvc\bin\WebGrease.dll
+E:\Projects\EUTmvc\EUTmvc\bin\WebMatrix.Data.dll
+E:\Projects\EUTmvc\EUTmvc\bin\WebMatrix.WebData.dll
+E:\Projects\EUTmvc\EUTmvc\bin\EntityFramework.xml
+E:\Projects\EUTmvc\EUTmvc\bin\Newtonsoft.Json.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Helpers.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Http.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Mvc.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.Razor.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.WebPages.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.xml
+E:\Projects\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.xml
+E:\Projects\EUTmvc\EUTmvc\bin\WebMatrix.Data.xml
+E:\Projects\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Projects\EUTmvc\EUTmvc\bin\WebMatrix.WebData.xml
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.xml
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.xml
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.xml
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.xml
+E:\Projects\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Projects\EUTmvc\EUTmvc\obj\Debug\EUTmvc.dll
+E:\Projects\EUTmvc\EUTmvc\obj\Debug\EUTmvc.pdb
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\EUTmvc.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\EUTmvc.pdb
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\Antlr3.Runtime.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\EntityFramework.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\Microsoft.Web.Infrastructure.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\Newtonsoft.Json.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Helpers.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Http.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Mvc.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Optimization.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Razor.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.WebPages.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\WebGrease.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\WebMatrix.Data.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\WebMatrix.WebData.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\EntityFramework.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\Newtonsoft.Json.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Helpers.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Http.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Mvc.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.Razor.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.WebPages.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\WebMatrix.Data.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\WebMatrix.WebData.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\obj\Debug\EUTmvc.dll
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\obj\Debug\EUTmvc.pdb
+E:\Study\Nam 4\TotNghiep\workspace\EUTmvc\EUTmvc\obj\Debug\EUTmvc.csprojResolveAssemblyReference.cache
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\obj\Debug\EUTmvc.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\obj\Debug\EUTmvc.pdb
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\EUTmvc.dll.config
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\EUTmvc.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\EUTmvc.pdb
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\Antlr3.Runtime.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\EntityFramework.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\Microsoft.Web.Infrastructure.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\Newtonsoft.Json.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\SRVTextToImage.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Helpers.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Http.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Mvc.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Optimization.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Razor.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.WebPages.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\WebGrease.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\WebMatrix.Data.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\WebMatrix.WebData.dll
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\EntityFramework.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\Newtonsoft.Json.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Helpers.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Http.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Mvc.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.Razor.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.WebPages.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\WebMatrix.Data.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\WebMatrix.WebData.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.xml
+D:\Minh\DuAn\DoAn\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\EUTmvc.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\EUTmvc.pdb
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Antlr3.Runtime.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\EntityFramework.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Microsoft.Web.Infrastructure.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Newtonsoft.Json.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\SRVTextToImage.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Helpers.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Http.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Mvc.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Optimization.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Razor.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.WebPages.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\WebGrease.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\WebMatrix.Data.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\WebMatrix.WebData.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Org.Mentalis.Security.Cryptography.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Mono.Math.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\EntityFramework.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Newtonsoft.Json.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Net.Http.Formatting.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Helpers.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Http.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Http.WebHost.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Mvc.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.Razor.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.WebPages.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.WebPages.Deployment.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\System.Web.WebPages.Razor.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\WebMatrix.Data.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\WebMatrix.WebData.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.AspNet.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.Core.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OAuth.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Org.Mentalis.Security.Cryptography.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\bin\Mono.Math.xml
+E:\Study\Project\DATT\EUTmvc\EUTmvc\obj\Debug\EUTmvc.csprojResolveAssemblyReference.cache
+E:\Study\Project\DATT\EUTmvc\EUTmvc\obj\Debug\EUTmvc.dll
+E:\Study\Project\DATT\EUTmvc\EUTmvc\obj\Debug\EUTmvc.pdb
+E:\Projects\EUTmvc\EUTmvc\bin\SRVTextToImage.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Org.Mentalis.Security.Cryptography.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Mono.Math.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Org.Mentalis.Security.Cryptography.xml
+E:\Projects\EUTmvc\EUTmvc\bin\Mono.Math.xml
+E:\Projects\EUTmvc\EUTmvc\bin\Microsoft.QualityTools.Testing.Fakes.dll
+E:\Projects\EUTmvc\EUTmvc\bin\Antlr3.Runtime.pdb
+E:\Projects\EUTmvc\EUTmvc\obj\Debug\Interop.VBIDE.dll
+E:\Projects\EUTmvc\EUTmvc\obj\Debug\EUTmvc.csproj.ResolveComReference.cache
+E:\Projects\EUTmvc\EUTmvc\obj\Debug\EUTmvc.csprojResolveAssemblyReference.cache

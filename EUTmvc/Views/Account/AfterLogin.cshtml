@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Đăng nhập thành công";
+}
+<META HTTP-EQUIV="Refresh" CONTENT="5;URL=@(Url.Action("Index", "Home"))">
+@*<script type="text/javascript">
+    window.setTimeout(function () {
+        window.location.href = '@Url.Action("Index", "Home")';
+    }, 5000);
+</script>*@
+
+<div class="col-lg-10 col-lg-offset-1">
+    <div class="page-header">
+        <h2>@ViewBag.Title</h2>
+    </div>
+    <div>
+        Chào bạn <span style="color: orange">@Session["LogedUserFullName"].ToString()</span> đã đăng nhập thành công.
+    </div>
+</div>

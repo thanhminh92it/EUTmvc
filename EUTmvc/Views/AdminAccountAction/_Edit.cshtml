@@ -1,0 +1,43 @@
+﻿@model EUTmvc.Models.Admin.AdminAccountEditAction
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Sửa thông tin tài khoản</h4>
+</div>
+@using (Html.BeginForm())
+{
+    <div class="modal-body">
+
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(mode=>Model.Account)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Account, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DisplayFor(model => model.Account, new { @class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.Account, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.GroupAcountId, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.GroupAcountId,new SelectList(Model.ListGroupAccount, "Id", "Name") ,"Chọn tất cả",new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.GroupAcountId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" type="button" data-dismiss="modal">Cancel</button>
+        <input class="btn btn-primary" type="submit" value="Save" />
+    </div>
+}

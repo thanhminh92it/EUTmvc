@@ -1,0 +1,61 @@
+﻿ <ul class="nav" id="side-menu">
+    <li class="sidebar-search">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+        </div>
+        <!-- /input-group -->
+    </li>
+    <li>
+        <a class="trangchu" href="@Url.Action("Index")"><i class="fa fa-home fa-fw"></i> Trang chủ </a>
+    </li>
+    <li class ="quantrihethong">
+        <a href="#"><i class="fa fa-lock fa-fw"></i> Quản trị hệ thống<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level ulht">
+            <li>
+                <a href="@Url.Action("Account")" class="taikhoan" >Quản lý tài khoản</a>
+            </li> 
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+    <li class="thongtin">
+        <a href="#"><i class="fa fa-info fa-fw"></i> Quản lý thông tin<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level ultt">
+            <li>
+                <a href="@Url.Action("Person", "Admin")" class="nguoidung">Quản lý người dùng</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Subtest", "Admin")" class="monthi">Quản lý môn thi</a>
+            </li>
+            <li>
+                <a href="@Url.Action("News", "Admin")" class="tintuc">Quản lý tin tức</a>
+            </li>
+        </ul>
+        <!-- /.nav-second-level -->
+    </li>
+    <li>
+        <a href="#"><i class="fa fa-book fa-fw"></i> Quản lý thi<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+            <li>
+                <a href="#">Lịch thi</a>
+            </li>
+            <li>
+                <a class="element" href="#">Quản lý câu hỏi</a>
+            </li>
+            <li>
+                <a class="element" href="#">Quản lý đề thi</a>
+            </li>
+            <li>
+                <a class="element" href="#">Khởi tạo và kết thúc phòng thi</a>
+            </li>                                
+        </ul>
+    </li>
+</ul>
+@section Scripts {
+    @Scripts.Render("~/bundles/menu")
+    
+}

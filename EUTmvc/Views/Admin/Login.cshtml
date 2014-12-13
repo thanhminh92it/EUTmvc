@@ -1,0 +1,99 @@
+﻿@model EUTmvc.Models.Admin.AdminAccountLogin
+<!DOCTYPE html>
+@{
+    Layout = null;
+}
+<html lang="vi">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/font-awesome-4.1.0/css/font-awesome.min.css")" rel="stylesheet" type="text/css">
+    <link href="@Url.Content("~/Content/plugins/metisMenu/metisMenu.min.css")" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/scripts")
+    <script src="@Url.Content("/Scripts/plugins/metisMenu/metisMenu.min.js")"></script>
+    <style type="text/css">
+        .alert-error {
+            background-color: #f2dede;
+            border-color: #eed3d7;
+            color: #b94a48;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Vui lòng đăng nhập</h3>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+                            <fieldset>
+                                @if (ViewBag.Message != null)
+                                {
+                                    <div class="form-group">
+                                        <div class="alert alert-error">
+                                            <a class="close" data-dismiss="alert" href="#">×</a>@Html.Raw(ViewBag.Message.ToString())
+                                        </div>
+                                    </div>
+                                }
+                                <div class="form-group">
+                                    <div class="input-group">
+                                         <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </span>
+                                        @Html.TextBoxFor(model => model.Account, new { @class="form-control", @placeholder="Tài khoản"})
+                                      </div>
+                                        @Html.ValidationMessageFor(model => model.Account, "", new { @class="text-danger"})
+                                </div>
+                                <div class="form-group">
+                                     <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-lock"></i>
+                                        </span>
+                                        @Html.PasswordFor(model => model.Password, new { @class="form-control", @placeholder="Mật khẩu"})
+                                     </div>
+                                     @Html.ValidationMessageFor(model => model.Password, "", new { @class="text-danger"})
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Nhớ tài khoản
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <input class="btn btn-lg btn-success btn-block" type="submit" value="Đăng nhập" />
+                            </fieldset>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     @Scripts.Render("~/bundles/bootstrap")
+</body>
+
+</html>
+

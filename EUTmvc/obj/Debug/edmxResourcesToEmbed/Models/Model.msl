@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DoAnModelStoreContainer" CdmEntityContainer="DoAnEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DoAnModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCauHois">
+      <EntityTypeMapping TypeName="DoAnModel.tblCauHoi">
+        <MappingFragment StoreEntitySet="tblCauHoi">
+          <ScalarProperty Name="IDCauHoi" ColumnName="IDCauHoi" />
+          <ScalarProperty Name="IDChuong" ColumnName="IDChuong" />
+          <ScalarProperty Name="CauHoi" ColumnName="CauHoi" />
+          <ScalarProperty Name="Da_A" ColumnName="Da_A" />
+          <ScalarProperty Name="Da_B" ColumnName="Da_B" />
+          <ScalarProperty Name="Da_C" ColumnName="Da_C" />
+          <ScalarProperty Name="Da_D" ColumnName="Da_D" />
+          <ScalarProperty Name="DA" ColumnName="DA" />
+          <ScalarProperty Name="IDDoKho" ColumnName="IDDoKho" />
+          <ScalarProperty Name="LoiGiai" ColumnName="LoiGiai" />
+          <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+          <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+          <ScalarProperty Name="SoLanSua" ColumnName="SoLanSua" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCauTrucDeThis">
+      <EntityTypeMapping TypeName="DoAnModel.tblCauTrucDeThi">
+        <MappingFragment StoreEntitySet="tblCauTrucDeThi">
+          <ScalarProperty Name="IDCauTruc" ColumnName="IDCauTruc" />
+          <ScalarProperty Name="IDMonThi" ColumnName="IDMonThi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChuongs">
+      <EntityTypeMapping TypeName="DoAnModel.tblChuong">
+        <MappingFragment StoreEntitySet="tblChuong">
+          <ScalarProperty Name="IDChuong" ColumnName="IDChuong" />
+          <ScalarProperty Name="IDMonThi" ColumnName="IDMonThi" />
+          <ScalarProperty Name="TenChuong" ColumnName="TenChuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblConNguois">
+      <EntityTypeMapping TypeName="DoAnModel.tblConNguoi">
+        <MappingFragment StoreEntitySet="tblConNguoi">
+          <ScalarProperty Name="IDConNguoi" ColumnName="IDConNguoi" />
+          <ScalarProperty Name="HoDem" ColumnName="HoDem" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NgheNghiep" ColumnName="NgheNghiep" />
+          <ScalarProperty Name="IDHocVi" ColumnName="IDHocVi" />
+          <ScalarProperty Name="IDTruong" ColumnName="IDTruong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeThis">
+      <EntityTypeMapping TypeName="DoAnModel.tblDeThi">
+        <MappingFragment StoreEntitySet="tblDeThi">
+          <ScalarProperty Name="IDDeThi" ColumnName="IDDeThi" />
+          <ScalarProperty Name="IDCauTruc" ColumnName="IDCauTruc" />
+          <ScalarProperty Name="IDDeThiGoc" ColumnName="IDDeThiGoc" />
+          <ScalarProperty Name="NguoiTao" ColumnName="NguoiTao" />
+          <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
+          <ScalarProperty Name="NguoiSua" ColumnName="NguoiSua" />
+          <ScalarProperty Name="NgaySua" ColumnName="NgaySua" />
+          <ScalarProperty Name="SoLanSua" ColumnName="SoLanSua" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDoKhoes">
+      <EntityTypeMapping TypeName="DoAnModel.tblDoKho">
+        <MappingFragment StoreEntitySet="tblDoKho">
+          <ScalarProperty Name="IDDoKho" ColumnName="IDDoKho" />
+          <ScalarProperty Name="DoKho" ColumnName="DoKho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGoiYDeThis">
+      <EntityTypeMapping TypeName="DoAnModel.tblGoiYDeThi">
+        <MappingFragment StoreEntitySet="tblGoiYDeThi">
+          <ScalarProperty Name="IDGoiY" ColumnName="IDGoiY" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHocVis">
+      <EntityTypeMapping TypeName="DoAnModel.tblHocVi">
+        <MappingFragment StoreEntitySet="tblHocVi">
+          <ScalarProperty Name="IDHocVi" ColumnName="IDHocVi" />
+          <ScalarProperty Name="HocVi" ColumnName="HocVi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHuyens">
+      <EntityTypeMapping TypeName="DoAnModel.tblHuyen">
+        <MappingFragment StoreEntitySet="tblHuyen">
+          <ScalarProperty Name="IDHuyen" ColumnName="IDHuyen" />
+          <ScalarProperty Name="TenHuyen" ColumnName="TenHuyen" />
+          <ScalarProperty Name="IDTinhThanh" ColumnName="IDTinhThanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKetQuaThis">
+      <EntityTypeMapping TypeName="DoAnModel.tblKetQuaThi">
+        <MappingFragment StoreEntitySet="tblKetQuaThi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TaiKhoan" ColumnName="TaiKhoan" />
+          <ScalarProperty Name="IDDeThi" ColumnName="IDDeThi" />
+          <ScalarProperty Name="ThoiGianThi" ColumnName="ThoiGianThi" />
+          <ScalarProperty Name="ThoiGianNop" ColumnName="ThoiGianNop" />
+          <ScalarProperty Name="Diem" ColumnName="Diem" />
+          <ScalarProperty Name="DapAnDaChon" ColumnName="DapAnDaChon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKhuVucs">
+      <EntityTypeMapping TypeName="DoAnModel.tblKhuVuc">
+        <MappingFragment StoreEntitySet="tblKhuVuc">
+          <ScalarProperty Name="IDKhuVuc" ColumnName="IDKhuVuc" />
+          <ScalarProperty Name="TenKhuVuc" ColumnName="TenKhuVuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLienKetNoiDungs">
+      <EntityTypeMapping TypeName="DoAnModel.tblLienKetNoiDung">
+        <MappingFragment StoreEntitySet="tblLienKetNoiDung">
+          <ScalarProperty Name="IDLienKet" ColumnName="IDLienKet" />
+          <ScalarProperty Name="IDGoiY" ColumnName="IDGoiY" />
+          <ScalarProperty Name="IDCauHoi" ColumnName="IDCauHoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMonThis">
+      <EntityTypeMapping TypeName="DoAnModel.tblMonThi">
+        <MappingFragment StoreEntitySet="tblMonThi">
+          <ScalarProperty Name="IDMonThi" ColumnName="IDMonThi" />
+          <ScalarProperty Name="MonThi" ColumnName="MonThi" />
+          <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+          <ScalarProperty Name="SoCauHoi" ColumnName="SoCauHoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNhomTaiKhoans">
+      <EntityTypeMapping TypeName="DoAnModel.tblNhomTaiKhoan">
+        <MappingFragment StoreEntitySet="tblNhomTaiKhoan">
+          <ScalarProperty Name="IDNhom" ColumnName="IDNhom" />
+          <ScalarProperty Name="Ten" ColumnName="Ten" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNoiDungCauTrucs">
+      <EntityTypeMapping TypeName="DoAnModel.tblNoiDungCauTruc">
+        <MappingFragment StoreEntitySet="tblNoiDungCauTruc">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDCauTruc" ColumnName="IDCauTruc" />
+          <ScalarProperty Name="IDChuong" ColumnName="IDChuong" />
+          <ScalarProperty Name="SoCauHoiDe" ColumnName="SoCauHoiDe" />
+          <ScalarProperty Name="SoCauHoiTB" ColumnName="SoCauHoiTB" />
+          <ScalarProperty Name="SoCauHoiKho" ColumnName="SoCauHoiKho" />
+          <ScalarProperty Name="SoCauHoiChuong" ColumnName="SoCauHoiChuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNoiDungDeThis">
+      <EntityTypeMapping TypeName="DoAnModel.tblNoiDungDeThi">
+        <MappingFragment StoreEntitySet="tblNoiDungDeThi">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDDeThi" ColumnName="IDDeThi" />
+          <ScalarProperty Name="CauSo" ColumnName="CauSo" />
+          <ScalarProperty Name="IDCauhoi" ColumnName="IDCauhoi" />
+          <ScalarProperty Name="ThuTuDA" ColumnName="ThuTuDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblQuyens">
+      <EntityTypeMapping TypeName="DoAnModel.tblQuyen">
+        <MappingFragment StoreEntitySet="tblQuyen">
+          <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+          <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+          <ScalarProperty Name="IDNhom" ColumnName="IDNhom" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTaiKhoans">
+      <EntityTypeMapping TypeName="DoAnModel.tblTaiKhoan">
+        <MappingFragment StoreEntitySet="tblTaiKhoan">
+          <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="ThoiGianCuoi" ColumnName="ThoiGianCuoi" />
+          <ScalarProperty Name="IDNhom" ColumnName="IDNhom" />
+          <ScalarProperty Name="IDConNguoi" ColumnName="IDConNguoi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTinhThanhs">
+      <EntityTypeMapping TypeName="DoAnModel.tblTinhThanh">
+        <MappingFragment StoreEntitySet="tblTinhThanh">
+          <ScalarProperty Name="IDTinhThanh" ColumnName="IDTinhThanh" />
+          <ScalarProperty Name="TenTinhThanh" ColumnName="TenTinhThanh" />
+          <ScalarProperty Name="IDKhuVuc" ColumnName="IDKhuVuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTruongs">
+      <EntityTypeMapping TypeName="DoAnModel.tblTruong">
+        <MappingFragment StoreEntitySet="tblTruong">
+          <ScalarProperty Name="IDTruong" ColumnName="IDTruong" />
+          <ScalarProperty Name="TenTruong" ColumnName="TenTruong" />
+          <ScalarProperty Name="DiaChiXa" ColumnName="DiaChiXa" />
+          <ScalarProperty Name="IDHuyen" ColumnName="IDHuyen" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

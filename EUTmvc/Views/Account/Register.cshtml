@@ -1,0 +1,90 @@
+﻿@model EUTmvc.Models.RegisterModel
+@{
+    ViewBag.Title = "Đăng Ký Tài Khoản";
+}
+<div class="col-md-8 col-md-offset-2">
+    <div class="page-header">
+        <h2>@ViewBag.Title</h2>
+    </div>
+
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <div class="form-group">
+                <label class="col-md-10">Bạn vui lòng điền đầy đủ các thông tin dưới đây:</label>
+            </div>
+            <div class="col-md-5 col-md-offset-3">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        @Html.TextBoxFor(m => m.Account, new { @class = "form-control", @placeholder = "Tài Khoản" })
+                    </div>
+                    <small>
+                        @Html.ValidationMessageFor(m => m.Account, null, new { @class = "help-block" })
+                    </small>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        @Html.PasswordFor(m => m.PassWord, new { @class = "form-control", @placeholder = "Mật Khẩu" })
+                    </div>
+                    <small>
+                        @Html.ValidationMessageFor(m => m.PassWord, null, new { @class = "help-block" })
+                    </small>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        @Html.PasswordFor(m => m.ConfirmPassWord, new { @class = "form-control", @placeholder = "Nhập Lại Mật Khẩu" })
+                    </div>
+                    <small>
+                        @Html.ValidationMessageFor(m => m.ConfirmPassWord, null, new { @class = "help-block" })
+                    </small>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i>
+                        </span>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+                    </div>
+                    <small>
+                        @Html.ValidationMessageFor(m => m.Email, null, new { @class = "help-block" })
+                    </small>
+                </div>
+                <div class="form-group">
+                    @Html.Partial("Parital/_Captcha")
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">C</span>
+                        @Html.TextBoxFor(m => m.CaptchaText, new { @class = "form-control", @placeholder = "Captcha" })
+                    </div>
+                    <small>
+                        @Html.ValidationMessageFor(m => m.CaptchaText, null, new { @class = "help-block" })
+                    </small>
+                </div>
+                <div class="form-group">
+                    <small>
+                        @if (ViewBag.Message != null)
+                        {
+                            <div class="alert alert-error">
+                                <a class="close" data-dismiss="alert" href="#">×</a>@Html.Raw(ViewBag.Message.ToString())
+                            </div>
+                        }
+                    </small>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Đăng Ký</button>
+                </div>
+            </div>  
+        }
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿<link href="~/Content/ladda-themeless.min.css" rel="stylesheet" />
+<script src="~/Scripts/spin.min.js"></script>
+<script src="~/Scripts/ladda.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnRefresh").click(function () {
+            var l = Ladda.create(this);
+            l.start();
+            //$('#imgCaptcha').attr('src', '/Captcha/GetCaptcha/' + Math.floor(Math.random() * 1000));
+            //l.stop();
+            $.ajax({
+                url: "/Captcha/GetCaptcha",
+                success: function () {
+                    $('#imgCaptcha').attr('src', '/Captcha/GetCaptcha/' + Math.floor(Math.random() * 1000));
+                    l.stop();
+                },
+                error: function () {
+                    alert('Error');
+                    l.stop();
+                }
+            });
+            return false;
+        });
+    });
+</script>
+<div class="input-group" style="margin-bottom: 10px;">
+    <span class="input-group-addon btn ladda-button" data-style="zoom-in" id="btnRefresh">
+            <span class="glyphicon glyphicon-refresh ladda-label" aria-hidden="true"></span>
+    </span>
+    <img src="@Url.Action("GetCaptcha", "Captcha")" class="form-control captcha img-responsive"id="imgCaptcha"/>
+
+</div>

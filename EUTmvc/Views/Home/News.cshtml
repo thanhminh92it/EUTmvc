@@ -1,0 +1,16 @@
+﻿@model EUTmvc.Models.tblNew
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="col-xs-10 col-xs-offset-1">
+    <div>
+        <h3>
+            @Html.Raw(Model.Title)
+        </h3>
+    </div>
+    <div>
+        @Html.Raw(Model.News)
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout/_Admin.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Quản lý môn thi</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+      <div id="replacetarget">
+           @{ Html.RenderAction("Index", "AdminSubtestAction"); }
+      </div>
+</div>
+@section Scripts {
+        <script>
+            $(document).ready(function () {
+                $('.thongtin').addClass('active');
+                $('.ultt').addClass('in');
+                $('.monthi').addClass('active');
+            });
+        </script>
+}

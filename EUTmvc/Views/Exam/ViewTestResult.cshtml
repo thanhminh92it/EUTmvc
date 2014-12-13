@@ -1,0 +1,48 @@
+﻿@model EUTmvc.Models.Evaluation
+@{
+    ViewBag.Title = "Xem Lại Bài Thi";
+}
+<fieldset disabled>
+    <div class="col-xs-12" style="text-align: center;">
+        <h3>Môn Thi : @Model.Subtests</h3>
+        <h4>Mã đề thi: @Model.ExamQuestionId</h4>
+        @*<h4>Thời gian làm bài : <span id="time">@Model.Time</span> phút
+        </h4>*@
+        <h4>Số câu hỏi : @Model.QuestionNumber</h4>
+    </div>
+    <div class="col-xs-12">
+        @for (int i = 0; i < Model.Questions.Count; i++)
+        {
+            <div class="form-group">
+                <div class="question">
+                    <span style="font-size: 20px">Câu @Model.Questions[i].TheNumber :</span>
+                    @Model.Questions[i].QuestionText
+                </div>
+                <div class="answer">
+                    @foreach (var a in Model.Questions[i].Answers)
+                    {
+                        if (Model.Questions[i].TrueAnswer.Equals(a.code) && !Model.Questions[i].TrueAnswer.Equals(Model.Questions[i].SelectedAnswer))
+                        {
+                        <div class="radio a-true">
+                            <label>
+                                @Html.RadioButtonFor(b => Model.Questions[i].SelectedAnswer, a.code)
+                                @a.code . @a.AnswerText
+                            </label>
+                        </div>
+                        }
+                        else
+                        {
+                        <div class="radio">
+                            <label>
+                                @Html.RadioButtonFor(b => Model.Questions[i].SelectedAnswer, a.code)
+                                @a.code . @a.AnswerText
+                            </label>
+                        </div>
+                        }
+
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</fieldset>

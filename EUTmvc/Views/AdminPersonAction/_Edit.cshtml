@@ -1,0 +1,61 @@
+﻿@model EUTmvc.Models.Admin.AdminPersonEditAction
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">Sửa thông tin người dùng</h4>
+</div>
+@using (Html.BeginForm())
+{
+    <div class="modal-body">
+
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(mode=>Model.Id)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NamePerson, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.NamePerson, new { @class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.NamePerson, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastNamePerson, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.LastNamePerson, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LastNamePerson, "", new { @class = "text-danger" })
+                </div>
+            </div>
+             <div class="form-group">
+                @Html.LabelFor(model => model.Sex, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.RadioButtonFor(model => model.Sex,"true") Nam
+                    @Html.RadioButtonFor(mode => Model.Sex, "false") Nữ
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.DateOfBirth, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "form-control", @type = "date"})
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control"})
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-4" })
+                <div class="col-md-8">
+                    @Html.TextAreaFor(model => model.Address, new { @class = "form-control"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" type="button" data-dismiss="modal">Cancel</button>
+        <input class="btn btn-primary" type="submit" value="Save" />
+    </div>
+}
