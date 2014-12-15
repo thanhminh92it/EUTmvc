@@ -2,11 +2,26 @@
 @{
     ViewBag.Title = "Thi";
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+        var id = $('#IDSubtest').text();
+        if (id != null) {
+            $('#SelectSubtests').val(trimSpace(id));
+        }
+    });
+    function trimSpace(str) {
+        return str.replace(/^\s*/, "").replace(/\s*$/, "");
+    }
+</script>
 <div class="col-lg-10 col-lg-offset-1">
     <div class="page-header">
         <h2>Chào mừng bạn đến với Website thi trực tuyến</h2>
     </div>
     <div>
+
+        <div id="IDSubtest" style="display: none;">
+            @if (ViewBag.Id != null){@ViewBag.Id}
+        </div>
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()

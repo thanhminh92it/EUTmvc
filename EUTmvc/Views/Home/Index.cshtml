@@ -4,25 +4,165 @@
     ViewBag.Title = "Trang Chủ";
 }
 
-<div class="col-md-12">
-    <div class="page-header" style="color: #00918d;">
-        <h2>Tin Tức</h2>
-    </div>
-    <div class="row" style="text-align: center">
-        @foreach (var item in Model)
-        {
-            <div class="nn-prod-box">
-                <div class="nn-prod-name">
-                    <a href="/Home/News/@item.Id">
-                        <h5>
-                            @Html.Raw(item.Title)
-                        </h5>
-                    </a>
+<div class="col-sm-9" style="border-right: 1px darkgrey solid;">
+    <div class="news">
+        <div class="col_left" id="TopLeftMainContent">
+            <div class="home-search-box">
+                <div id="tnv_home_newst">
+                    <div class="hot_event">
+                        <a title="Bạn dám không?" href="@Url.Action("BanDamKhong","Exam")"><span class="hot_event_span hot_event_bdk"></span></a>
+                    </div>
+                    <div class="hot_event">
+                        <a title="Thách đấu" href="@Url.Action("ThachDau","Exam")"><span class="hot_event_span hot_event_thachdau"></span></a>
+                    </div>
+                    <div class="hot_event">
+                        <a title="Trắc nghiệm vui" href="#"><span class="hot_event_span hot_event_tnv"></span></a>
+                    </div>
+                    <div class="hot_event">
+                        <a title="Kênh thảo luận - Forum" href="#"><span class="hot_event_span hot_event_thidau"></span></a>
+                    </div>
                 </div>
-                <a href="/Home/News/@item.Id">
-                    <img class="nn-prod-image" src="/Uploads/images/News/@item.Image" title="@item.Title">
+            </div>
+        </div>
+        <div class="col_cent" id="TopRightMainContent">
+
+            <div id="bottomside">
+                <div id="menucontent">
+                    <div id="dmmenucontent">
+                        <h2>Tin nổi bật</h2>
+                    </div>
+                </div>
+                <div class="news-list-thumb">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <a href="/Home/News/@Model[0].Id">
+                                <img class="nn-prod-image" src="/Uploads/images/News/@Model[0].Image" title="@Model[0].News">
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <h3>
+                                <a href="/Home/News/@Model[0].Id">@Html.Raw(@Model[0].Title)</a>
+                            </h3>
+                            <span>
+                                @Html.Raw(@Model[0].News)
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="listcontent24">
+                    <ul>
+
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                <h3><a href="/Home/News/@item.Id">@Html.Raw(item.Title)</a></h3>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div style="clear: both;"></div>
+            <!--begin //Modules/News/ViewerNews/NewsSlideShow/SlideshowNews.ascx-->
+        </div>
+        <div style="clear: both;"></div>
+        <!--begin //Modules/Search/ucBoxSearch.ascx-->
+    </div>
+    <div class="space25"></div>
+    <div class="lophoc">
+        <div class="lop12_menu">
+
+            <div class="lop12_repeat">
+                <span class="thithu_title">
+                    <span class="thithu_header"></span>
+                    <h2 class="h2_home">Đề thi thử đại học</h2>
+                </span>
+            </div>
+        </div>
+        <div style="text-align: center">
+            <div class="nn-prod-box">
+                <a href="/Exam/Index/1" class="" title="Thi thử đại học môn hóa">
+                    <div class="thithudh"></div>
                 </a>
             </div>
-        }
+            <div class="nn-prod-box">
+                <a href="/Exam/Index/3" class="" title="Thi thử đại học môn sinh">
+                    <div class="thithudh thithudh_sinh"></div>
+                </a>
+            </div>
+            <div class="nn-prod-box">
+                <a href="/Exam/Index/2" class="" title="Thi thử đại học môn vật lý">
+                    <div class="thithudh thithudh_ly"></div>
+                </a>
+            </div>
+            <div class="nn-prod-box">
+                <a href="/Exam/Index/4" class="" title="Thi thử đại học môn tiếng anh">
+                    <div class="thithudh thithudh_en"></div>
+                </a>
+            </div>
+        </div>
+        <div class="space30"></div>
     </div>
+    <div class="lophoc">
+        <div class="lop12_menu">
+
+            <div class="lop12_repeat">
+                <span class="thithu_title">
+                    <span class="thithu_header"></span>
+                    <h2 class="h2_home">Bộ đề thi đại học - cao đẳng</h2>
+                </span>
+            </div>
+        </div>
+        <div class="" style="text-align: center">
+            <div class="nn-prod-box dhcd_box dhcd_box_h">
+                <a href="#" >Năm thi 2014</a>
+            </div>
+            <div class="nn-prod-box dhcd_box dhcd_box_h" style="background: #5964E2;">
+                <a href="#" >Năm thi 2013</a>
+            </div>
+            <div class="nn-prod-box dhcd_box dhcd_box_h" style="background: #2CB4CE;">
+                <a href="#" >Năm thi 2012</a>
+            </div>
+            <div class="nn-prod-box dhcd_box dhcd_box_h" style="background: #19A229;">
+                <a href="#" >Năm thi 2011</a>
+            </div>
+            <div class="nn-prod-box dhcd_box dhcd_box_h" style="background: #F311C6;">
+                <a href="#" >Năm thi 2010</a>
+            </div>
+            <div class="nn-prod-box dhcd_box dhcd_box_h" style="background: #A88F07;">
+                <a href="#" >Năm thi 2009</a>
+            </div>
+        </div>
+        <div class="space30"></div>
+    </div>
+</div>
+<div class="col-sm-3">
+    <div class="right_menu">
+            <div class="social_icon"></div>
+            <div class="right_menu_title"><h3 class="h3_right">Trò chuyện - Hỏi đáp nhanh</h3></div>                
+            <div class="right_box">                
+                <div class="space10"></div>
+                <!-- send -->        
+                            
+                <textarea onfocus="divOnfocus(this,'Bạn muốn chia sẻ gì?')" onblur="divOnblur(this,'Bạn muốn chia sẻ gì?')" id="post_social">Bạn muốn chia sẻ gì?</textarea>
+                <div rel="popover" class="social_smile" data-original-title="" title=""></div>                
+                <div onclick="return social_post();" class="btn btt_send btn-primary" id="btn_social_post">Gửi</div>
+                <img width="32" height="32" src="/images/ajaxLoading.gif" class="hidden" id="soical_post_loading">
+                                <div class="space10"></div>                
+                                <!-- my social -->
+                
+                
+                                <!-- List -->
+                
+                <!-- Button load more -->
+                
+                
+            </div>
+            <!-- Ecomotion -->
+            
+            
+        </div>
 </div>

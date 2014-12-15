@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using EUTmvc.Utils;
 
 namespace EUTmvc.Models
 {
@@ -12,6 +13,11 @@ namespace EUTmvc.Models
         public static List<tblNew> News()
         {
             var m = db.tblNews.ToList();
+            foreach (var item in m)
+            {
+                string s = ConvertToHtml.RemoveTagsRegex(item.News);
+                item.News = ChuanHoa.ChuoiNkitu(s, 300);
+            }
             return m;
         }
 
