@@ -256,7 +256,6 @@
     <Compile Include="Models\tblTestResultsContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Captcha.cs" />
-    <Compile Include="Utils\ChuanHoa.cs" />
     <Compile Include="Utils\ConvertToHtml.cs" />
     <Compile Include="Utils\Md5.cs" />
     <Compile Include="Utils\Pager.cs" />
@@ -290,7 +289,6 @@
     <Content Include="Content\plugins\social-buttons.css" />
     <Content Include="Content\plugins\timeline.css" />
     <Content Include="Content\sb-admin-2.css" />
-    <Content Include="Content\style123.css" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -332,19 +330,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Avatar\no_avatar.png" />
     <Content Include="Images\Avatar\no_avatar_1.png" />
-    <Content Include="Images\background.png" />
-    <Content Include="Images\Banner\Noelphai.swf" />
-    <Content Include="Images\Banner\Noeltrai.swf" />
-    <Content Include="Images\bg_event.jpg" />
-    <Content Include="Images\body.jpg" />
     <Content Include="Images\clock.png" />
-    <Content Include="Images\congcutimkiem.jpg" />
-    <Content Include="Images\hot-event.png" />
-    <Content Include="Images\icon_title.gif" />
-    <Content Include="Images\right_menu_repeat.png" />
-    <Content Include="Images\sandau.png" />
-    <Content Include="Images\thithudh.jpg" />
-    <Content Include="Images\thithudh.png" />
     <Content Include="less\mixins.less" />
     <Content Include="less\sb-admin-2.less" />
     <Content Include="less\variables.less" />
@@ -1377,9 +1363,6 @@
     <Content Include="Views\Exam\Learning.cshtml" />
     <Content Include="Views\Exam\LearnResult.cshtml" />
     <Content Include="Views\File\Index.cshtml" />
-    <Content Include="Views\Shared\Parital\_Banner.cshtml" />
-    <Content Include="Views\Exam\ThachDau.cshtml" />
-    <Content Include="Views\Exam\BanDamKhong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

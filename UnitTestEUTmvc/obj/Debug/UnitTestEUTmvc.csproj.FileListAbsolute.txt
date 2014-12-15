@@ -39,17 +39,3 @@ E:\Study\Project\DATT\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Web.Http.WebHost.xm
 E:\Study\Project\DATT\EUTmvc\UnitTestEUTmvc\obj\Debug\UnitTestEUTmvc.csprojResolveAssemblyReference.cache
 E:\Study\Project\DATT\EUTmvc\UnitTestEUTmvc\obj\Debug\UnitTestEUTmvc.dll
 E:\Study\Project\DATT\EUTmvc\UnitTestEUTmvc\obj\Debug\UnitTestEUTmvc.pdb
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\UnitTestEUTmvc.dll
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\UnitTestEUTmvc.pdb
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\Microsoft.Web.WebPages.OAuth.dll
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Net.Http.Formatting.dll
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Web.Http.dll
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Web.Http.WebHost.dll
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\Microsoft.Web.WebPages.OAuth.xml
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Net.Http.Formatting.xml
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Web.Http.xml
-D:\EUTmvc\UnitTestEUTmvc\bin\Debug\System.Web.Http.WebHost.xml
-D:\EUTmvc\UnitTestEUTmvc\obj\Debug\UnitTestEUTmvc.dll
-D:\EUTmvc\UnitTestEUTmvc\obj\Debug\UnitTestEUTmvc.pdb
-D:\EUTmvc\UnitTestEUTmvc\obj\Debug\UnitTestEUTmvc.csprojResolveAssemblyReference.cache

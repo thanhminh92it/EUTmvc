@@ -12,7 +12,7 @@
         {
             <div class="form-group">
                 <div class="question">
-                    @*<span style="font-size: 20px">Câu @Model.Questions[i].TheNumber :</span>*@
+                    <span style="font-size: 20px">Câu @Model.Questions[i].TheNumber :</span>
                     @Html.Raw(Model.Questions[i].QuestionText)
                 </div>
                 <div class="answer">
@@ -23,8 +23,7 @@
                         <div class="radio a-true">
                             <label>
                                 @Html.RadioButtonFor(b => Model.Questions[i].SelectedAnswer, a.code)
-                                @*@a.code . *@
-                                @Html.Raw(a.AnswerText)
+                                @a.code . @a.AnswerText
                             </label>
                         </div>
                         }
@@ -33,8 +32,7 @@
                         <div class="radio">
                             <label>
                                 @Html.RadioButtonFor(b => Model.Questions[i].SelectedAnswer, a.code)
-                                @*@a.code . *@
-                                @Html.Raw(a.AnswerText)
+                                @a.code . @a.AnswerText
                             </label>
                         </div>
                         }

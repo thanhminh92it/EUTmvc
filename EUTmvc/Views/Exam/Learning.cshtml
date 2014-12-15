@@ -17,7 +17,7 @@
 
             <div class="col-xs-12" style="box-shadow: 0 0 5px gray; padding: 0 30px;">
                 <div class="form-group">
-                    <div class="page-header" style="text-align: center;">
+                    <div class="page-header">
                         <h2>Môn: @Html.Raw(Model.Subtests)</h2>
                         <h3>Chương: @Html.Raw(Model.Category)</h3>
                         @Html.HiddenFor(m=>Model.Subtests)
@@ -30,7 +30,7 @@
                         <div class="form-group">
                             @Html.HiddenFor(x => Model.Questions[i].ID)
                             <div class="question">
-                                @*<p style="font-size: 20px">Câu @Model.Questions[i].TheNumber :</p>*@
+                                <p style="font-size: 20px">Câu @Model.Questions[i].TheNumber :</p>
                                 @Html.Raw(Model.Questions[i].QuestionText)
                             </div>
                             <div class="answer">
@@ -39,8 +39,7 @@
                                     <div class="radio">
                                         <label>
                                             @Html.RadioButtonFor(b => Model.Questions[i].SelectedAnswer, a.code)
-                                            @*@a.code . *@
-                                            @Html.Raw(a.AnswerText)
+                                            @a.code . @Html.Raw(a.AnswerText)
                                         </label>
                                     </div>
                                 }
