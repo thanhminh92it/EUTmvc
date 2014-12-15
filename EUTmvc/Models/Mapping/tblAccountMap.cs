@@ -47,6 +47,7 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.NewTime).HasColumnName("NewTime");
             this.Property(t => t.GroupAcountId).HasColumnName("GroupAcountId");
             this.Property(t => t.PersonId).HasColumnName("PersonId");
+            this.Property(t => t.Point).HasColumnName("Point");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");

@@ -15,10 +15,6 @@ namespace EUTmvc.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(50);
 
-            this.Property(t => t.Name)
-                .IsRequired()
-                .HasMaxLength(50);
-
             this.Property(t => t.Difficulty)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -36,7 +32,6 @@ namespace EUTmvc.Models.Mapping
             this.ToTable("tblLevel");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
-            this.Property(t => t.Name).HasColumnName("Name");
             this.Property(t => t.Difficulty).HasColumnName("Difficulty");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");

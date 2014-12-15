@@ -7,11 +7,11 @@ namespace EUTmvc.Models
     {
         public tblForm()
         {
-            this.tblQuestions = new List<tblQuestion>();
+            this.tblExamStructs = new List<tblExamStruct>();
         }
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
-        public virtual ICollection<tblQuestion> tblQuestions { get; set; }
+        public virtual ICollection<tblExamStruct> tblExamStructs { get; set; }
     }
 }

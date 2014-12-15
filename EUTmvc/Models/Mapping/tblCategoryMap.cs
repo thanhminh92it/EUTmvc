@@ -11,16 +11,15 @@ namespace EUTmvc.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
+            this.Property(t => t.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+
             this.Property(t => t.Code)
-                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.Name)
                 .IsRequired()
-                .HasMaxLength(50);
-
-            this.Property(t => t.Description)
-                .HasMaxLength(50);
+                .HasMaxLength(200);
 
             this.Property(t => t.CreatedBy)
                 .HasMaxLength(50);
@@ -33,8 +32,7 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
             this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.SubtestsID).HasColumnName("SubtestsID");
-            this.Property(t => t.Description).HasColumnName("Description");
+            this.Property(t => t.IdSubtest).HasColumnName("IdSubtest");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             this.Property(t => t.ModifiedBy).HasColumnName("ModifiedBy");
@@ -44,7 +42,7 @@ namespace EUTmvc.Models.Mapping
             // Relationships
             this.HasRequired(t => t.tblSubtest)
                 .WithMany(t => t.tblCategories)
-                .HasForeignKey(d => d.SubtestsID);
+                .HasForeignKey(d => d.IdSubtest);
 
         }
     }

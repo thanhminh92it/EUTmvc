@@ -23,7 +23,6 @@ namespace EUTmvc.Models.Mapping
             // Table & Column Mappings
             this.ToTable("tblSuggestion");
             this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.QuestionId).HasColumnName("QuestionId");
             this.Property(t => t.Contents).HasColumnName("Contents");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
@@ -31,12 +30,6 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.ModifiedBy).HasColumnName("ModifiedBy");
             this.Property(t => t.ModifiedDate).HasColumnName("ModifiedDate");
             this.Property(t => t.ModifiedCount).HasColumnName("ModifiedCount");
-
-            // Relationships
-            this.HasRequired(t => t.tblQuestion)
-                .WithMany(t => t.tblSuggestions)
-                .HasForeignKey(d => d.QuestionId);
-
         }
     }
 }

@@ -12,7 +12,6 @@ namespace EUTmvc.Models.Mapping
 
             // Properties
             this.Property(t => t.Code)
-                .IsRequired()
                 .HasMaxLength(50);
 
             this.Property(t => t.Name)
@@ -20,7 +19,7 @@ namespace EUTmvc.Models.Mapping
                 .HasMaxLength(50);
 
             this.Property(t => t.Description)
-                .HasMaxLength(50);
+                .HasMaxLength(100);
 
             this.Property(t => t.CreatedBy)
                 .HasMaxLength(50);
@@ -29,12 +28,10 @@ namespace EUTmvc.Models.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            this.ToTable("tblSubtests");
+            this.ToTable("tblSubtest");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
             this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.Time).HasColumnName("Time");
-            this.Property(t => t.QuestionNumber).HasColumnName("QuestionNumber");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");

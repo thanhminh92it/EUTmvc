@@ -14,9 +14,6 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Code)
                 .HasMaxLength(50);
 
-            this.Property(t => t.Name)
-                .HasMaxLength(50);
-
             this.Property(t => t.Description)
                 .HasMaxLength(50);
 
@@ -30,8 +27,8 @@ namespace EUTmvc.Models.Mapping
             this.ToTable("tblExamQuestion");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
-            this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.StructId).HasColumnName("StructId");
+            this.Property(t => t.IdExamStruct).HasColumnName("IdExamStruct");
+            this.Property(t => t.IdQuestion).HasColumnName("IdQuestion");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
@@ -40,9 +37,12 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.ModifiedCount).HasColumnName("ModifiedCount");
 
             // Relationships
-            this.HasRequired(t => t.tblStruct)
+            this.HasRequired(t => t.tblExamStruct)
                 .WithMany(t => t.tblExamQuestions)
-                .HasForeignKey(d => d.StructId);
+                .HasForeignKey(d => d.IdExamStruct);
+            this.HasRequired(t => t.tblQuestion)
+                .WithMany(t => t.tblExamQuestions)
+                .HasForeignKey(d => d.IdQuestion);
 
         }
     }

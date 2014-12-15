@@ -8,14 +8,12 @@ namespace EUTmvc.Models
         public tblCategory()
         {
             this.tblQuestions = new List<tblQuestion>();
-            this.tblStructContents = new List<tblStructContent>();
         }
 
         public int Id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
-        public int SubtestsID { get; set; }
-        public string Description { get; set; }
+        public int IdSubtest { get; set; }
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
@@ -23,6 +21,5 @@ namespace EUTmvc.Models
         public Nullable<int> ModifiedCount { get; set; }
         public virtual tblSubtest tblSubtest { get; set; }
         public virtual ICollection<tblQuestion> tblQuestions { get; set; }
-        public virtual ICollection<tblStructContent> tblStructContents { get; set; }
     }
 }

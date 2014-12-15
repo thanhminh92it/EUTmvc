@@ -11,15 +11,22 @@ namespace EUTmvc.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
+            this.Property(t => t.Id)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+
             this.Property(t => t.Code)
                 .IsRequired()
                 .HasMaxLength(50);
 
-            this.Property(t => t.OrderAnswers)
-                .HasMaxLength(50);
+            this.Property(t => t.Name)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            this.Property(t => t.Title)
+                .HasMaxLength(200);
 
             this.Property(t => t.Description)
-                .HasMaxLength(50);
+                .HasMaxLength(200);
 
             this.Property(t => t.CreatedBy)
                 .HasMaxLength(50);
@@ -31,10 +38,13 @@ namespace EUTmvc.Models.Mapping
             this.ToTable("tblExamStruct");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
-            this.Property(t => t.ExamQuestionId).HasColumnName("ExamQuestionId");
-            this.Property(t => t.TheNumber).HasColumnName("TheNumber");
-            this.Property(t => t.QuestionId).HasColumnName("QuestionId");
-            this.Property(t => t.OrderAnswers).HasColumnName("OrderAnswers");
+            this.Property(t => t.Name).HasColumnName("Name");
+            this.Property(t => t.Title).HasColumnName("Title");
+            this.Property(t => t.Year).HasColumnName("Year");
+            this.Property(t => t.IdForm).HasColumnName("IdForm");
+            this.Property(t => t.HardNumber).HasColumnName("HardNumber");
+            this.Property(t => t.AverageNumber).HasColumnName("AverageNumber");
+            this.Property(t => t.EasyNumber).HasColumnName("EasyNumber");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
@@ -43,12 +53,9 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.ModifiedCount).HasColumnName("ModifiedCount");
 
             // Relationships
-            this.HasRequired(t => t.tblExamQuestion)
+            this.HasOptional(t => t.tblForm)
                 .WithMany(t => t.tblExamStructs)
-                .HasForeignKey(d => d.ExamQuestionId);
-            this.HasRequired(t => t.tblQuestion)
-                .WithMany(t => t.tblExamStructs)
-                .HasForeignKey(d => d.QuestionId);
+                .HasForeignKey(d => d.IdForm);
 
         }
     }

@@ -7,23 +7,25 @@ namespace EUTmvc.Models
     {
         public tblExamStruct()
         {
-            this.tblTestResultsContents = new List<tblTestResultsContent>();
+            this.tblExamQuestions = new List<tblExamQuestion>();
         }
 
         public int Id { get; set; }
         public string Code { get; set; }
-        public int ExamQuestionId { get; set; }
-        public Nullable<int> TheNumber { get; set; }
-        public int QuestionId { get; set; }
-        public string OrderAnswers { get; set; }
+        public string Name { get; set; }
+        public string Title { get; set; }
+        public Nullable<int> Year { get; set; }
+        public Nullable<int> IdForm { get; set; }
+        public Nullable<int> HardNumber { get; set; }
+        public Nullable<int> AverageNumber { get; set; }
+        public Nullable<int> EasyNumber { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public string ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<int> ModifiedCount { get; set; }
-        public virtual tblExamQuestion tblExamQuestion { get; set; }
-        public virtual tblQuestion tblQuestion { get; set; }
-        public virtual ICollection<tblTestResultsContent> tblTestResultsContents { get; set; }
+        public virtual ICollection<tblExamQuestion> tblExamQuestions { get; set; }
+        public virtual tblForm tblForm { get; set; }
     }
 }

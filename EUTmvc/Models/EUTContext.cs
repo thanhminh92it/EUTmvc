@@ -29,18 +29,14 @@ namespace EUTmvc.Models
         public DbSet<tblForm> tblForms { get; set; }
         public DbSet<tblGroupAcount> tblGroupAcounts { get; set; }
         public DbSet<tblLevel> tblLevels { get; set; }
-        public DbSet<tblLink> tblLinks { get; set; }
         public DbSet<tblNew> tblNews { get; set; }
         public DbSet<tblPerson> tblPersons { get; set; }
         public DbSet<tblQuestion> tblQuestions { get; set; }
+        public DbSet<tblResult> tblResults { get; set; }
         public DbSet<tblSchool> tblSchools { get; set; }
         public DbSet<tblStatusAccount> tblStatusAccounts { get; set; }
-        public DbSet<tblStruct> tblStructs { get; set; }
-        public DbSet<tblStructContent> tblStructContents { get; set; }
         public DbSet<tblSubtest> tblSubtests { get; set; }
         public DbSet<tblSuggestion> tblSuggestions { get; set; }
-        public DbSet<tblTestResult> tblTestResults { get; set; }
-        public DbSet<tblTestResultsContent> tblTestResultsContents { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -57,18 +53,14 @@ namespace EUTmvc.Models
             modelBuilder.Configurations.Add(new tblFormMap());
             modelBuilder.Configurations.Add(new tblGroupAcountMap());
             modelBuilder.Configurations.Add(new tblLevelMap());
-            modelBuilder.Configurations.Add(new tblLinkMap());
             modelBuilder.Configurations.Add(new tblNewMap());
             modelBuilder.Configurations.Add(new tblPersonMap());
             modelBuilder.Configurations.Add(new tblQuestionMap());
+            modelBuilder.Configurations.Add(new tblResultMap());
             modelBuilder.Configurations.Add(new tblSchoolMap());
             modelBuilder.Configurations.Add(new tblStatusAccountMap());
-            modelBuilder.Configurations.Add(new tblStructMap());
-            modelBuilder.Configurations.Add(new tblStructContentMap());
             modelBuilder.Configurations.Add(new tblSubtestMap());
             modelBuilder.Configurations.Add(new tblSuggestionMap());
-            modelBuilder.Configurations.Add(new tblTestResultMap());
-            modelBuilder.Configurations.Add(new tblTestResultsContentMap());
         }
     }
 }
