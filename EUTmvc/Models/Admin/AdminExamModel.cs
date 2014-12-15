@@ -99,13 +99,13 @@ namespace EUTmvc.Models.Admin
                 var question = new tblQuestion
                 {
                     Code = item.Count.ToString(),
-                    Contents = item[j++],
+                    Contents = ChuanHoa.ChuanHoaHTML(item[j++]),
                     Answer = "A",
-                    AnswerA = item[j++],
-                    AnswerB = item[j++],
-                    AnswerC = item[j++],
-                    AnswerD = item[j],
-                    CategoryID = 16,
+                    AnswerA = ChuanHoa.ChuanHoaHTML(item[j++]),
+                    AnswerB = ChuanHoa.ChuanHoaHTML(item[j++]),
+                    AnswerC = ChuanHoa.ChuanHoaHTML(item[j++]),
+                    AnswerD = ChuanHoa.ChuanHoaHTML(item[j]),
+                    CategoryID = 3,
                     FormID = 1
                 };
                 db.tblQuestions.Add(question);

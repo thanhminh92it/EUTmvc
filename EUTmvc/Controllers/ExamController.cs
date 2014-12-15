@@ -7,7 +7,7 @@ namespace EUTmvc.Controllers
     {
         //
         // GET: /Thi/
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
             var account = (string)Session["Account"];
             int k = AccountModel.CheckStatusAccount(account);
@@ -16,6 +16,10 @@ namespace EUTmvc.Controllers
                 return RedirectToAction("Login", "Account");
             }
             var subtests = new Subtests();
+            if (id != null)
+            {
+                ViewBag.Id = id.ToString();
+            }
             return View(subtests);
         }
 
@@ -107,6 +111,16 @@ namespace EUTmvc.Controllers
             }
             var model = Models.Exam.ViewTestResult(id, account);
             return View(model);
+        }
+
+        public ActionResult ThachDau()
+        {
+            return View();
+        }
+
+        public ActionResult BanDamKhong()
+        {
+            return View();
         }
     }
 }

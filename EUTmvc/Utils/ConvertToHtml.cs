@@ -64,7 +64,8 @@ namespace EUTmvc.Utils
         }
         public static string RemoveTagsRegex(string source)
         {
-            return Regex.Replace(source, "<.*?>", string.Empty);
+            string str = StripTagsCharArray(source);
+            return Regex.Replace(str, "<.*?>", string.Empty);
         }
         public static string StripTagsCharArray(string str)
         {

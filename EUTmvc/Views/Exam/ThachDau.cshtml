@@ -1,0 +1,177 @@
+﻿@{
+    ViewBag.Title = "Thách đấu kiến thức giữa các thành viên";
+}
+<link href="~/Content/style123.css" rel="stylesheet" />
+<div id="thachdau">
+    <div class="thd_title"><img width="246" height="93" src="/images/sandau.png"></div>
+    <!-- Thong bao -->
+    <div class="thd_thongbao">
+        <div class="thd_thongbao_top"></div>
+        <div class="thd_thongbao_center">
+            <div class="thd_thongbao_text">
+                <div class="center thd_welcome">Chào mừng các bạn đến với khu vực thách đấu thành viên</div>
+                <div class="space10"></div>
+                <span class="pr_icon thd_icon"></span>
+                <a href="#" target="_blank" class="alink bold">Click tại đây để xem hướng dẫn chi tiết.</a>                                                
+                <div class="space5"></div>
+                <strong>Quy trình thách đấu</strong>: <br>
+                    + Người chơi có quyền chọn lựa đối thủ là một trong những thành viên của hệ thống để gửi lời thách đấu. <br>
+                	+ Lời thách đấu sẽ bao gồm 1 bài kiểm tra với 10 câu hỏi dùng chung cho cả 2 đối thủ, ai làm nhanh hơn, điểm số cao hơn sẽ là người chiến thắng. <br>
+                    + Khi tham gia mỗi thành viên sẽ phải đặt cược 1 lượng điểm thành tích mà mình có, người chiến thắng sẽ được nhận điểm thành tích cược của người thua và cả điểm thành tích mà mình đã đem ra đặt cược, người thua dĩ nhiên sẽ mất số điểm mà mình đã đặt cược. <br>
+                    + Người thách đấu sau khi chọn đối thủ, điểm đặt cược, môn học sẽ được hệ thống sinh ngẫu nhiên 1 đề bài để làm, nộp bài và chờ đợi đối thủ của mình hoàn thành bài thách đấu. <br>
+                    + Mỗi đối thủ có thể làm bài ở những thời điểm khác nhau, không nhất thiết phải cùng Online, kết quả thắng thua được xác định khi người cuối cùng hoàn thành bài làm. <br>
+                    + Trong trường hợp đối thủ <strong>Từ chối</strong> không tham gia, người thách đấu sẽ được hệ thống gửi trả lại điểm thành tích đã đặt cược. <br>                     
+                    + Nếu bạn hoặc đối thủ bỏ cuộc, người còn lại nghiễm nhiên được tính là thắng cuộc sau khi hoàn thành bài làm, nếu cả 2 cùng bỏ cuộc thì hệ thống thắng :) <br>                                              
+                    + Lời thách đấu có hiệu lực trong vòng <strong>7 ngày</strong>, sau 7 ngày sẽ bị hủy và hoàn trả điểm đặt cược cho người thách đấu.
+            </div>        
+        <div class="thd_thongbao_bottom"></div>
+    </div>
+    <div class="space30"></div>
+    
+    <!-- Combat Init -->
+    <div class="thd_combat_init" style="color: black;">
+        <form action="#" method="post" class="form-inline" name="form_thachdau" id="form_thachdau">
+        <div class="thd_combat_left">Lựa chọn đối thủ bạn muốn thách đấu:</div>
+        <div class="thd_combat_right">
+            <input type="text" value="" placeholder="Điền tên đăng nhập của đối thủ" onkeyup="return thd_TimDoiThu();" name="thd_doithu" id="thd_doithu" class="form-control">            
+            <div id="thd_find_user"></div>
+        </div>                
+        <!-- Diem thanh tich dat cuoc -->
+        <div class="space15"></div>    
+        <div class="thd_combat_left">Cược điểm thành tích:</div>
+        <div class="thd_combat_right">
+            <select style="width: 100px;" onchange="return change_init();" class="form-control" name="thd_dtt" id="thd_dtt">
+                <option selected="selected" value="10">10 điểm</option>
+                <option value="20">20 điểm</option>
+                <option value="30">30 điểm</option>
+            </select>
+        </div>
+        
+        <!-- Mon thi dau -->
+        <div class="space15"></div>
+        <div class="thd_combat_left">Môn thi đấu:</div>
+        <div class="thd_combat_right">
+            <select onchange="return thd_monhoc_change();" class="form-control thd_160" name="thd_monthi" id="thd_monthi">
+                <option selected="selected" value="2">Hóa học</option>
+                <option value="3">Sinh học</option>
+                <option value="1">Vật lý</option>
+                <option value="13">Toán học</option>
+            </select>            
+        </div>
+        
+        <!-- Cau hoi -->
+        <div class="space15"></div>
+        <div class="thd_combat_left">Kiến thức lớp:</div>
+        <div class="thd_combat_right">
+            <select onchange="return thd_monhoc_change();" class="form-control thd_160" name="thd_lop" id="thd_lop">
+                <option selected="selected" value="4">Lớp 12</option>
+                <option value="3">Lớp 11</option>
+                <option value="6">Lớp 10</option>
+            </select>
+        </div>
+        
+        
+        <div class="space15"></div>
+        <div class="thd_combat_left">Chương ôn luyện:</div>
+        <div class="thd_combat_right">
+            <select class="form-control" name="thd_chuong" id="thd_chuong">
+                <option selected="selected" value="0">---- Tất cả các chương ----</option>
+                <option value="12">Este - Lipit</option><option value="13">Cacbohiđrat</option><option value="14">Amin, Amino axit và Protein</option><option value="15">Polime và vật liệu Polime</option><option value="16">Đại cương về kim loại</option><option value="17">Kim loại kiềm, kim loại kiềm thổ, nhôm</option><option value="18">Sắt và một số kim loại quan trọng</option><option value="19">Phân biệt một số chất vô cơ</option>                
+            </select>
+        </div>
+        
+        <!-- Thoi gian -->
+        <div class="space15"></div>
+        <div class="thd_combat_left">Thời gian:</div>
+        <div class="thd_combat_right">
+            <input type="text" class="form-control thd_160 input_disable" value="15 phút" disabled="true">
+        </div>
+        
+        <!-- Thoi gian -->
+        <div class="space15"></div>
+        <div class="thd_combat_left">Tổng câu hỏi:</div>
+        <div class="thd_combat_right"> 
+            <input type="text" class="form-control thd_160 input_disable" value="10 câu" disabled="true">
+        </div>
+        
+        </form>
+    </div>      
+    
+    <div class="thd_bangvang">
+        <div class="thd_bv_title">Thông tin cá nhân</div>
+            	<div class="bxh_item">
+            <span class="thd_mem_l">Họ và tên:</span>
+            <span class="thd_mem_r">Hà Lê Văn</span>            
+        </div>
+        <div class="bxh_item">
+            <span class="thd_mem_l">Tên đăng nhập:</span>
+            <span class="thd_mem_r">ha-le-van</span>            
+        </div>
+        <div class="bxh_item">
+            <span class="thd_mem_l">Điểm thành tích:</span>
+            <span class="thd_mem_r"><span class="money">11</span>&nbsp;đ</span>            
+        </div>
+        <div class="bxh_item">
+            <span class="thd_mem_l">Tỉ lệ thắng thua:</span>
+            <span class="thd_mem_r"><span class="dong">0 thắng </span> <span>&nbsp;/&nbsp;</span> <span class="bold">0 thua</span></span>            
+        </div>
+                                                 
+    </div>
+    
+    <!-- Info -->
+    <div class="space25"></div>
+    <div class="thd_info_init">
+        <div class="thd_info_left"></div>
+        <div class="thd_info_center" style="color: black;">
+            <div class="space15"></div>
+            <span class="thd_info_mem_a">
+                <div class="space10"></div>
+                Thách đấu
+            </span>
+            <span class="thd_info_line"></span>            
+            <span class="thd_info_text"><label id="thd_info_mon">Vật lý</label> <label id="thd_info_lop">Lớp 12</label></span>
+            <span class="thd_info_line thd_info_line2"></span>
+            <span id="thd_info_cauhoi" class="thd_info_text">Câu hỏi: 10</span>
+            <span class="thd_info_line thd_info_line2"></span>
+            <span id="thd_info_thoigian" class="thd_info_text">Thời gian: 15 phút</span>
+            <span class="thd_info_line thd_info_line2"></span>
+            <span class="thd_info_text">Mức cược: <label id="thd_info_diemtt">30</label> điểm thành tích</span>            
+            <span class="thd_info_line thd_info_line2"></span>
+            <span id="thd_info_doithu" class="thd_info_text">Đối thủ: <label id="thd_info_username"></label> </span>
+        </div>
+        <div class="thd_info_right"></div>
+    </div>
+    <!-- Button Bat dau -->
+    <div class="space20"></div>
+    <div class="thd_button" onclick="return thd_sendRequest();" id="thd_btt_batdau">
+        <div class="space45"></div>
+        Bắt đầu
+    </div>            
+    <div class="space15"></div>
+    <div class="center"><a href="/" class="btn btn-info">Về trang chủ</a></div>
+    <div class="space20"></div>        
+    <div class="thd_error" id="thd_error"></div>        
+    <div class="space40"></div>          
+</div>
+
+<!-- Modal : Confirm Init -->
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal_thdInit" class="modal fade">
+  <div class="modal-dialog">    
+    <div class="modal-content">
+      <div class="modal-header">                    
+        <h4 id="myModalLabel" class="modal-title">Xác nhận thông tin</h4>
+      </div>
+      <div class="modal-body">
+          <div class="modal_row">
+              <div class="center">Bạn chấp nhận tham gia thách đấu? Nếu bỏ cuộc hoặc bị thua bạn sẽ mất hết số điểm thành tích đã đặt cược.</div>
+              <div class="space10"></div>
+              <a data-dismiss="modal" class="btn btn-default">Hủy bỏ yêu cầu</a>
+              <span class="span-space"></span> <span class="span-space"></span>
+              <a class="btn btn-primary" onclick="return thd_confirm_init();" href="javascript:;">Tôi tham gia thách đấu</a>
+          </div>
+      </div>
+    </div><!-- /.modal-content -->    
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</div>
