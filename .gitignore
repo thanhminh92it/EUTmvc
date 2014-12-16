@@ -46,8 +46,14 @@ Temporary Items
 .packages
 
 
-EUTmvc/obj
-UnitTestEUTmvc/obj
+EUTmvc/obj/
+UnitTestEUTmvc/obj/
 EUTmvc/obj/Debug/Interop.VBIDE.dll
 EUTmvc/obj/Debug/EUTmvc.csproj.ResolveComReference.cache
 EUTmvc/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+EUTmvc/bin/EUTmvc.dll
+EUTmvc/bin/EUTmvc.pdb
+EUTmvc/bin/Microsoft.QualityTools.Testing.Fakes.dll
+EUTmvc/obj/Debug/EUTmvc.csprojResolveAssemblyReference.cache
+EUTmvc/obj/Debug/EUTmvc.dll
+EUTmvc/obj/Debug/EUTmvc.pdb
