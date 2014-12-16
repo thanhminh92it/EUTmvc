@@ -10,6 +10,8 @@ namespace EUTmvc.Models
         public Nullable<int> IdAccount { get; set; }
         public Nullable<int> IdExamQuestion { get; set; }
         public string Answer { get; set; }
+        public Nullable<System.DateTime> ExecutionTime { get; set; }
+        public Nullable<System.DateTime> EndTime { get; set; }
         public Nullable<double> Point { get; set; }
         public virtual tblAccount tblAccount { get; set; }
         public virtual tblExamQuestion tblExamQuestion { get; set; }
