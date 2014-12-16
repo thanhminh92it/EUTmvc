@@ -27,6 +27,8 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.IdAccount).HasColumnName("IdAccount");
             this.Property(t => t.IdExamQuestion).HasColumnName("IdExamQuestion");
             this.Property(t => t.Answer).HasColumnName("Answer");
+            this.Property(t => t.ExecutionTime).HasColumnName("ExecutionTime");
+            this.Property(t => t.EndTime).HasColumnName("EndTime");
             this.Property(t => t.Point).HasColumnName("Point");
 
             // Relationships
