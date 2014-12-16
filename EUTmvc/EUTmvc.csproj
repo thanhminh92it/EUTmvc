@@ -270,6 +270,7 @@
     <Content Include="Content\ladda-themeless.min.css" />
     <Content Include="Content\ladda.css" />
     <Content Include="Content\ladda.min.css" />
+    <Content Include="Content\minhpt.css" />
     <Content Include="Content\plugins\dataTables.bootstrap.css" />
     <Content Include="Content\plugins\metisMenu\metisMenu.css" />
     <Content Include="Content\plugins\metisMenu\metisMenu.min.css" />
@@ -328,6 +329,7 @@
     <Content Include="Images\congcutimkiem.jpg" />
     <Content Include="Images\hot-event.png" />
     <Content Include="Images\icon_title.gif" />
+    <Content Include="Images\nv_bg_level1_right.png" />
     <Content Include="Images\right_menu_repeat.png" />
     <Content Include="Images\sandau.png" />
     <Content Include="Images\thithudh.jpg" />
