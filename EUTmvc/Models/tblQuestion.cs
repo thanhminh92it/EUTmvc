@@ -13,14 +13,14 @@ namespace EUTmvc.Models
         public int Id { get; set; }
         public string Code { get; set; }
         public string Contents { get; set; }
-        public Nullable<int> IdCategory { get; set; }
-        public Nullable<int> IdLevel { get; set; }
+        public Nullable<int> CategoryId { get; set; }
+        public Nullable<int> LevelId { get; set; }
         public string Answer { get; set; }
         public string AnswerA { get; set; }
         public string AnswerB { get; set; }
         public string AnswerC { get; set; }
         public string AnswerD { get; set; }
-        public Nullable<int> IdSuggestion { get; set; }
+        public Nullable<int> SuggestionId { get; set; }
         public Nullable<int> ModifiedCount { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }

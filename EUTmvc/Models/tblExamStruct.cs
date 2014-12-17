@@ -15,7 +15,7 @@ namespace EUTmvc.Models
         public string Name { get; set; }
         public string Title { get; set; }
         public Nullable<int> Year { get; set; }
-        public Nullable<int> IdForm { get; set; }
+        public Nullable<int> FormId { get; set; }
         public Nullable<int> HardNumber { get; set; }
         public Nullable<int> AverageNumber { get; set; }
         public Nullable<int> EasyNumber { get; set; }

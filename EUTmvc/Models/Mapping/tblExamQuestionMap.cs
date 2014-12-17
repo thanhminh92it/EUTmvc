@@ -27,8 +27,8 @@ namespace EUTmvc.Models.Mapping
             this.ToTable("tblExamQuestion");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
-            this.Property(t => t.IdExamStruct).HasColumnName("IdExamStruct");
-            this.Property(t => t.IdQuestion).HasColumnName("IdQuestion");
+            this.Property(t => t.ExamStructId).HasColumnName("ExamStructId");
+            this.Property(t => t.QuestionId).HasColumnName("QuestionId");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
@@ -39,10 +39,10 @@ namespace EUTmvc.Models.Mapping
             // Relationships
             this.HasRequired(t => t.tblExamStruct)
                 .WithMany(t => t.tblExamQuestions)
-                .HasForeignKey(d => d.IdExamStruct);
+                .HasForeignKey(d => d.ExamStructId);
             this.HasRequired(t => t.tblQuestion)
                 .WithMany(t => t.tblExamQuestions)
-                .HasForeignKey(d => d.IdQuestion);
+                .HasForeignKey(d => d.QuestionId);
 
         }
     }

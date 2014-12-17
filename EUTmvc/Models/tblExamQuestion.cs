@@ -12,8 +12,8 @@ namespace EUTmvc.Models
 
         public int Id { get; set; }
         public string Code { get; set; }
-        public int IdExamStruct { get; set; }
-        public int IdQuestion { get; set; }
+        public int ExamStructId { get; set; }
+        public int QuestionId { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }

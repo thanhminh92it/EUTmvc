@@ -7,8 +7,8 @@ namespace EUTmvc.Models
     {
         public int Id { get; set; }
         public string Code { get; set; }
-        public Nullable<int> IdAccount { get; set; }
-        public Nullable<int> IdExamQuestion { get; set; }
+        public Nullable<int> AccountId { get; set; }
+        public Nullable<int> ExamQuestionId { get; set; }
         public string Answer { get; set; }
         public Nullable<System.DateTime> ExecutionTime { get; set; }
         public Nullable<System.DateTime> EndTime { get; set; }

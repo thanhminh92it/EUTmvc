@@ -31,14 +31,14 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
             this.Property(t => t.Contents).HasColumnName("Contents");
-            this.Property(t => t.IdCategory).HasColumnName("IdCategory");
-            this.Property(t => t.IdLevel).HasColumnName("IdLevel");
+            this.Property(t => t.CategoryId).HasColumnName("CategoryId");
+            this.Property(t => t.LevelId).HasColumnName("LevelId");
             this.Property(t => t.Answer).HasColumnName("Answer");
             this.Property(t => t.AnswerA).HasColumnName("AnswerA");
             this.Property(t => t.AnswerB).HasColumnName("AnswerB");
             this.Property(t => t.AnswerC).HasColumnName("AnswerC");
             this.Property(t => t.AnswerD).HasColumnName("AnswerD");
-            this.Property(t => t.IdSuggestion).HasColumnName("IdSuggestion");
+            this.Property(t => t.SuggestionId).HasColumnName("SuggestionId");
             this.Property(t => t.ModifiedCount).HasColumnName("ModifiedCount");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
@@ -49,13 +49,13 @@ namespace EUTmvc.Models.Mapping
             // Relationships
             this.HasOptional(t => t.tblCategory)
                 .WithMany(t => t.tblQuestions)
-                .HasForeignKey(d => d.IdCategory);
+                .HasForeignKey(d => d.CategoryId);
             this.HasOptional(t => t.tblLevel)
                 .WithMany(t => t.tblQuestions)
-                .HasForeignKey(d => d.IdLevel);
+                .HasForeignKey(d => d.LevelId);
             this.HasOptional(t => t.tblSuggestion)
                 .WithMany(t => t.tblQuestions)
-                .HasForeignKey(d => d.IdSuggestion);
+                .HasForeignKey(d => d.SuggestionId);
 
         }
     }

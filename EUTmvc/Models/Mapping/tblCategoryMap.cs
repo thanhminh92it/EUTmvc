@@ -32,7 +32,7 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
             this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.IdSubtest).HasColumnName("IdSubtest");
+            this.Property(t => t.SubtestId).HasColumnName("SubtestId");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
             this.Property(t => t.ModifiedBy).HasColumnName("ModifiedBy");
@@ -42,7 +42,7 @@ namespace EUTmvc.Models.Mapping
             // Relationships
             this.HasRequired(t => t.tblSubtest)
                 .WithMany(t => t.tblCategories)
-                .HasForeignKey(d => d.IdSubtest);
+                .HasForeignKey(d => d.SubtestId);
 
         }
     }

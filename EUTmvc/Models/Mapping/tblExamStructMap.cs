@@ -41,7 +41,7 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Name).HasColumnName("Name");
             this.Property(t => t.Title).HasColumnName("Title");
             this.Property(t => t.Year).HasColumnName("Year");
-            this.Property(t => t.IdForm).HasColumnName("IdForm");
+            this.Property(t => t.FormId).HasColumnName("FormId");
             this.Property(t => t.HardNumber).HasColumnName("HardNumber");
             this.Property(t => t.AverageNumber).HasColumnName("AverageNumber");
             this.Property(t => t.EasyNumber).HasColumnName("EasyNumber");
@@ -55,7 +55,7 @@ namespace EUTmvc.Models.Mapping
             // Relationships
             this.HasOptional(t => t.tblForm)
                 .WithMany(t => t.tblExamStructs)
-                .HasForeignKey(d => d.IdForm);
+                .HasForeignKey(d => d.FormId);
 
         }
     }
