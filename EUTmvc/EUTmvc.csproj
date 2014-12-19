@@ -197,6 +197,7 @@
     <Compile Include="Models\EUTContext.cs" />
     <Compile Include="Models\Home\AccountModel.cs" />
     <Compile Include="Models\Home\EmailModel.cs" />
+    <Compile Include="Models\Home\ExamModel.cs" />
     <Compile Include="Models\Home\FileClass.cs" />
     <Compile Include="Models\Home\NewsModel.cs" />
     <Compile Include="Models\Mapping\sysdiagramMap.cs" />
@@ -210,6 +211,7 @@
     <Compile Include="Models\Mapping\tblExamQuestionMap.cs" />
     <Compile Include="Models\Mapping\tblExamStructMap.cs" />
     <Compile Include="Models\Mapping\tblFormMap.cs" />
+    <Compile Include="Models\Mapping\tblGradeMap.cs" />
     <Compile Include="Models\Mapping\tblGroupAcountMap.cs" />
     <Compile Include="Models\Mapping\tblLevelMap.cs" />
     <Compile Include="Models\Mapping\tblNewMap.cs" />
@@ -231,6 +233,7 @@
     <Compile Include="Models\tblExamQuestion.cs" />
     <Compile Include="Models\tblExamStruct.cs" />
     <Compile Include="Models\tblForm.cs" />
+    <Compile Include="Models\tblGrade.cs" />
     <Compile Include="Models\tblGroupAcount.cs" />
     <Compile Include="Models\tblLevel.cs" />
     <Compile Include="Models\tblNew.cs" />
@@ -1358,6 +1361,8 @@
     <Content Include="Views\Shared\Parital\_Banner.cshtml" />
     <Content Include="Views\Exam\Index.cshtml" />
     <Content Include="Views\Exam\ExamEnglish.cshtml" />
+    <Content Include="Views\Exam\ExamResult.cshtml" />
+    <Content Include="Views\Exam\ExamAnswer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

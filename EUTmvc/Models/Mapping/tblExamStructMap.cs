@@ -11,9 +11,6 @@ namespace EUTmvc.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             this.Property(t => t.Code)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -29,7 +26,7 @@ namespace EUTmvc.Models.Mapping
                 .HasMaxLength(200);
 
             this.Property(t => t.CreatedBy)
-                .HasMaxLength(50);
+                .HasMaxLength(200);
 
             this.Property(t => t.ModifiedBy)
                 .HasMaxLength(50);
@@ -42,9 +39,11 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Title).HasColumnName("Title");
             this.Property(t => t.Year).HasColumnName("Year");
             this.Property(t => t.FormId).HasColumnName("FormId");
+            this.Property(t => t.GradeId).HasColumnName("GradeId");
             this.Property(t => t.HardNumber).HasColumnName("HardNumber");
             this.Property(t => t.AverageNumber).HasColumnName("AverageNumber");
             this.Property(t => t.EasyNumber).HasColumnName("EasyNumber");
+            this.Property(t => t.AllTime).HasColumnName("AllTime");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
@@ -56,6 +55,9 @@ namespace EUTmvc.Models.Mapping
             this.HasOptional(t => t.tblForm)
                 .WithMany(t => t.tblExamStructs)
                 .HasForeignKey(d => d.FormId);
+            this.HasOptional(t => t.tblGrade)
+                .WithMany(t => t.tblExamStructs)
+                .HasForeignKey(d => d.GradeId);
 
         }
     }

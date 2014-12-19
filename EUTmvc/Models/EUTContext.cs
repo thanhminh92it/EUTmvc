@@ -27,6 +27,7 @@ namespace EUTmvc.Models
         public DbSet<tblExamQuestion> tblExamQuestions { get; set; }
         public DbSet<tblExamStruct> tblExamStructs { get; set; }
         public DbSet<tblForm> tblForms { get; set; }
+        public DbSet<tblGrade> tblGrades { get; set; }
         public DbSet<tblGroupAcount> tblGroupAcounts { get; set; }
         public DbSet<tblLevel> tblLevels { get; set; }
         public DbSet<tblNew> tblNews { get; set; }
@@ -51,6 +52,7 @@ namespace EUTmvc.Models
             modelBuilder.Configurations.Add(new tblExamQuestionMap());
             modelBuilder.Configurations.Add(new tblExamStructMap());
             modelBuilder.Configurations.Add(new tblFormMap());
+            modelBuilder.Configurations.Add(new tblGradeMap());
             modelBuilder.Configurations.Add(new tblGroupAcountMap());
             modelBuilder.Configurations.Add(new tblLevelMap());
             modelBuilder.Configurations.Add(new tblNewMap());

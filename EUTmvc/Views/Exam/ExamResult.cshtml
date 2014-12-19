@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "ExamResult";
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+}
+@Styles.Render("~/Content/jquerycountdown")
+@Scripts.Render("~/bundles/jquerycountdown")
+<script src="~/Scripts/CountdownJavaScript.js"></script>
+<div class="exam-body">
+    <div class="col-sm-9">
+        <div class="exam-container">
+            <div class="exam-menu">
+                <ul>
+                    <li class="child_c_1">
+                        <div class="child_nav_left">
+                            <a href="#">Thi thử</a>
+                        </div>
+                        <div class="child_nav_right">&nbsp;</div>
+                    </li>
+                    <li class="child_c_2">
+                        <div class="child_nav_left_c">@Model.Subtest</div>
+                        <div class="child_nav_right_c">&nbsp;</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="exam-title">
+                @Model.Name
+            </div>
+            <div class="col-sm-offset-4">
+                <div id="defaultCountdown"></div>
+            </div>
+            <div class="exam-question">
+                <div class="margin-top-percent-7">
+                    <div class="col-sm-4 text-center pull-left">
+                        <p><strong>@Model.CreateBy</strong> </p>
+                        <p>&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+                        <p>@Model.Title</p>
+                    </div>
+                    <div class="col-sm-6 text-center pull-left col-sm-offset-2">
+                        <p class="text-center"><strong>@Model.Name</strong></p>
+                        <p><strong>&nbsp;Môn: @Model.Subtest; @Model.GradeName </strong></p>
+                        <p>Thời gian làm bài: @Model.AllTime phút; Mã đề: @Model.Code </p>
+                     </div>
+                    <div class="clear"></div>
+                    <div class="text-center margin-top-percent-7">
+                        <strong>@Model.Description</strong>
+                        <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 result">
+                <p class="text-bold">Kết quả bài thi của bạn: 0 điểm/số câu trả lời đúng: 0</p>
+                <p class="text-bold color-green">Bạn làm bài cũng tốt đấy</p>
+                <div class="col-lg-12 col-md-12">
+                    <a href="#" class="btn btn-primary btn-sm">Xem đáp án</a>
+                    <a href="#" class="btn btn-primary btn-sm">Xem lại bài làm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <h5>Bên phải làm cái éo gì thì làm</h5>
+    </div>
+</div>

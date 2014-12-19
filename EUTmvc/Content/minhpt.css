@@ -5,6 +5,10 @@
 .exam-body .col-sm-9{
     padding-right: 10px !important;
     padding-left: 10px !important;
+    width:80% !important;
+}
+.exam-body .col-sm-3{
+    width:20% !important;
 }
 .exam-container {
    border-right: 1px #d5d5d5 solid ;
@@ -35,11 +39,13 @@
     float: left;
     background: url(../images/nv_bg_level1.jpg) repeat-x;
     padding: 0 3px 0 29px;
+    width:100px;
 }
 .child_nav_left_c {
     float: left;
     background: url(../images/nv_bg_level2.jpg) repeat-x;
     padding: 0 3px 0 40px;
+    width:110px;
 }
 .child_nav_right {
     float: left;
@@ -74,9 +80,30 @@
 .exam-container #defaultCountdown {
     margin-top:5%;
 }
-.exam-body .margin-top-percent-3 {
+.exam-container .result {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 1px 1px 4px #aeaeae;
+}
+.exam-container .result a{
+    margin-bottom:5px;
+}
+.margin-top-percent-2 {
+    margin-top:2%;
+}
+.margin-top-percent-3 {
     margin-top:3%;
 }
-.exam-body .margin-top-percent-7 {
+.margin-top-percent-7 {
     margin-top:7%;
+}
+.text-bold {
+    font-weight:bold;
+}
+.clear {
+    clear:both;
+}
+.color-green{
+    color:#5cb85c;
 }

@@ -11,9 +11,6 @@ namespace EUTmvc.Models.Mapping
             this.HasKey(t => t.Id);
 
             // Properties
-            this.Property(t => t.Id)
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-
             this.Property(t => t.Code)
                 .HasMaxLength(50);
 
@@ -38,6 +35,7 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.AnswerB).HasColumnName("AnswerB");
             this.Property(t => t.AnswerC).HasColumnName("AnswerC");
             this.Property(t => t.AnswerD).HasColumnName("AnswerD");
+            this.Property(t => t.AnswerDetail).HasColumnName("AnswerDetail");
             this.Property(t => t.SuggestionId).HasColumnName("SuggestionId");
             this.Property(t => t.ModifiedCount).HasColumnName("ModifiedCount");
             this.Property(t => t.Description).HasColumnName("Description");

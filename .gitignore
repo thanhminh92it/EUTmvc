@@ -65,3 +65,7 @@ EUTmvc/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 EUTmvc/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 EUTmvc/EUTmvc.csproj
 EUTmvc.v11.suo
+EUTmvc/App_Start/RouteConfig.cs
+*.dll
+UnitTestEUTmvc/obj/Debug/UnitTestEUTmvc.csproj.FileListAbsolute.txt
+EUTmvc/App_Start/RouteConfig.cs

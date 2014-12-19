@@ -20,6 +20,7 @@ namespace EUTmvc.Models
         public string AnswerB { get; set; }
         public string AnswerC { get; set; }
         public string AnswerD { get; set; }
+        public string AnswerDetail { get; set; }
         public Nullable<int> SuggestionId { get; set; }
         public Nullable<int> ModifiedCount { get; set; }
         public string Description { get; set; }
