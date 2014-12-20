@@ -18,13 +18,13 @@ namespace EUTmvc.Controllers
         {
             return View();
         }
-        public ActionResult ExamEnglish()
+        public ActionResult ExamGlobal()
         {
-            return View(ExamStart.LoadExam(1));
+            return View();
         }
-        public ActionResult ExamResult(Exam model)
+        public ActionResult ExamResult()
         {
-            return View(model);
+            return View();
         }
         public ActionResult ExamAnswer()
         {

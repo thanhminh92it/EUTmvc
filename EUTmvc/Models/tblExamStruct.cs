@@ -20,6 +20,10 @@ namespace EUTmvc.Models
         public Nullable<int> AverageNumber { get; set; }
         public Nullable<int> HardNumber { get; set; }
         public Nullable<int> CategoryNumber { get; set; }
+        public Nullable<int> QuestionNumber { get; set; }
+        public Nullable<int> Time { get; set; }
+        public Nullable<double> Request { get; set; }
+        public Nullable<int> SubtestId { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
@@ -28,7 +32,6 @@ namespace EUTmvc.Models
         public Nullable<int> ModifiedCount { get; set; }
         public virtual ICollection<tblExamQuestion> tblExamQuestions { get; set; }
         public virtual tblForm tblForm { get; set; }
-        public virtual tblGrade tblGrade { get; set; }
         public virtual ICollection<tblStructContent> tblStructContents { get; set; }
     }
 }

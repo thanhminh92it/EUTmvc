@@ -39,6 +39,10 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.AverageNumber).HasColumnName("AverageNumber");
             this.Property(t => t.HardNumber).HasColumnName("HardNumber");
             this.Property(t => t.CategoryNumber).HasColumnName("CategoryNumber");
+            this.Property(t => t.QuestionNumber).HasColumnName("QuestionNumber");
+            this.Property(t => t.Time).HasColumnName("Time");
+            this.Property(t => t.Request).HasColumnName("Request");
+            this.Property(t => t.SubtestId).HasColumnName("SubtestId");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
@@ -50,9 +54,6 @@ namespace EUTmvc.Models.Mapping
             this.HasOptional(t => t.tblForm)
                 .WithMany(t => t.tblExamStructs)
                 .HasForeignKey(d => d.FormId);
-            this.HasOptional(t => t.tblGrade)
-                .WithMany(t => t.tblExamStructs)
-                .HasForeignKey(d => d.GradeId);
 
         }
     }
