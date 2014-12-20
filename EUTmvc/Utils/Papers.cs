@@ -13,6 +13,8 @@ namespace EUTmvc.Utils
         public int Id { get; set; }
         public int AccountId { get; set; }
         public int? Time { get; set; }
+        public string Subtest { get; set; }
+        public string Category { get; set; }
 
         public List<Question> Questions = new List<Question>();
         public int AccumulatedPoints { get; set; }
@@ -65,9 +67,9 @@ namespace EUTmvc.Utils
                 if (model != null)
                 {
                     Description = model.Description;
-                    //QuestionNumber = model.QuestionNumber;
-                    //Time = model.Time;
-                    //Request = model.Request;
+                    QuestionNumber = model.QuestionNumber;
+                    Time = model.Time;
+                    Request = model.Request;
                 }
             }
             Subtest = new Subtests();

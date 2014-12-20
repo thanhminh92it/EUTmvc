@@ -80,6 +80,7 @@ namespace EUTmvc.Models.Home
                 {
                     Id = id,
                     Time = examQuestions.tblExamStruct.Time,
+                    Subtest = examQuestions.tblExamStruct.tblSubtest.Name
                 };
                 var str = examQuestions.QuestionId.Split(';');
                 foreach (var s in str)
