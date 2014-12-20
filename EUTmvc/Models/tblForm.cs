@@ -13,6 +13,9 @@ namespace EUTmvc.Models
 
         public int Id { get; set; }
         public string Description { get; set; }
+        public Nullable<int> Time { get; set; }
+        public Nullable<double> Request { get; set; }
+        public Nullable<int> QuestionNumber { get; set; }
         public virtual ICollection<tblChallenge> tblChallenges { get; set; }
         public virtual ICollection<tblExamStruct> tblExamStructs { get; set; }
     }
