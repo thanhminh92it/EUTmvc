@@ -21,6 +21,7 @@ namespace EUTmvc.Models
         public DbSet<tblArea> tblAreas { get; set; }
         public DbSet<tblAuthority> tblAuthorities { get; set; }
         public DbSet<tblCategory> tblCategories { get; set; }
+        public DbSet<tblChallenge> tblChallenges { get; set; }
         public DbSet<tblCountry> tblCountries { get; set; }
         public DbSet<tblDegree> tblDegrees { get; set; }
         public DbSet<tblDistrict> tblDistricts { get; set; }
@@ -36,6 +37,7 @@ namespace EUTmvc.Models
         public DbSet<tblResult> tblResults { get; set; }
         public DbSet<tblSchool> tblSchools { get; set; }
         public DbSet<tblStatusAccount> tblStatusAccounts { get; set; }
+        public DbSet<tblStructContent> tblStructContents { get; set; }
         public DbSet<tblSubtest> tblSubtests { get; set; }
         public DbSet<tblSuggestion> tblSuggestions { get; set; }
 
@@ -46,6 +48,7 @@ namespace EUTmvc.Models
             modelBuilder.Configurations.Add(new tblAreaMap());
             modelBuilder.Configurations.Add(new tblAuthorityMap());
             modelBuilder.Configurations.Add(new tblCategoryMap());
+            modelBuilder.Configurations.Add(new tblChallengeMap());
             modelBuilder.Configurations.Add(new tblCountryMap());
             modelBuilder.Configurations.Add(new tblDegreeMap());
             modelBuilder.Configurations.Add(new tblDistrictMap());
@@ -61,6 +64,7 @@ namespace EUTmvc.Models
             modelBuilder.Configurations.Add(new tblResultMap());
             modelBuilder.Configurations.Add(new tblSchoolMap());
             modelBuilder.Configurations.Add(new tblStatusAccountMap());
+            modelBuilder.Configurations.Add(new tblStructContentMap());
             modelBuilder.Configurations.Add(new tblSubtestMap());
             modelBuilder.Configurations.Add(new tblSuggestionMap());
         }

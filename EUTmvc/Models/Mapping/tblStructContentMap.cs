@@ -3,9 +3,9 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace EUTmvc.Models.Mapping
 {
-    public class tblExamStructMap : EntityTypeConfiguration<tblExamStruct>
+    public class tblStructContentMap : EntityTypeConfiguration<tblStructContent>
     {
-        public tblExamStructMap()
+        public tblStructContentMap()
         {
             // Primary Key
             this.HasKey(t => t.Id);
@@ -15,12 +15,8 @@ namespace EUTmvc.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(50);
 
-            this.Property(t => t.Name)
-                .IsRequired()
-                .HasMaxLength(100);
-
             this.Property(t => t.Description)
-                .HasMaxLength(200);
+                .HasMaxLength(50);
 
             this.Property(t => t.CreatedBy)
                 .HasMaxLength(50);
@@ -29,16 +25,14 @@ namespace EUTmvc.Models.Mapping
                 .HasMaxLength(50);
 
             // Table & Column Mappings
-            this.ToTable("tblExamStruct");
+            this.ToTable("tblStructContent");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
-            this.Property(t => t.Name).HasColumnName("Name");
-            this.Property(t => t.FormId).HasColumnName("FormId");
-            this.Property(t => t.GradeId).HasColumnName("GradeId");
+            this.Property(t => t.ExamStructId).HasColumnName("ExamStructId");
+            this.Property(t => t.CategoryId).HasColumnName("CategoryId");
             this.Property(t => t.EasyNumber).HasColumnName("EasyNumber");
             this.Property(t => t.AverageNumber).HasColumnName("AverageNumber");
             this.Property(t => t.HardNumber).HasColumnName("HardNumber");
-            this.Property(t => t.CategoryNumber).HasColumnName("CategoryNumber");
             this.Property(t => t.Description).HasColumnName("Description");
             this.Property(t => t.CreatedBy).HasColumnName("CreatedBy");
             this.Property(t => t.CreatedDate).HasColumnName("CreatedDate");
@@ -47,12 +41,12 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.ModifiedCount).HasColumnName("ModifiedCount");
 
             // Relationships
-            this.HasOptional(t => t.tblForm)
-                .WithMany(t => t.tblExamStructs)
-                .HasForeignKey(d => d.FormId);
-            this.HasOptional(t => t.tblGrade)
-                .WithMany(t => t.tblExamStructs)
-                .HasForeignKey(d => d.GradeId);
+            this.HasRequired(t => t.tblCategory)
+                .WithMany(t => t.tblStructContents)
+                .HasForeignKey(d => d.CategoryId);
+            this.HasRequired(t => t.tblExamStruct)
+                .WithMany(t => t.tblStructContents)
+                .HasForeignKey(d => d.ExamStructId);
 
         }
     }

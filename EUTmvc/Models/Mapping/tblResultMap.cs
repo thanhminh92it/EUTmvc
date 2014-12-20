@@ -23,10 +23,12 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Code).HasColumnName("Code");
             this.Property(t => t.AccountId).HasColumnName("AccountId");
             this.Property(t => t.ExamQuestionId).HasColumnName("ExamQuestionId");
+            this.Property(t => t.Seed).HasColumnName("Seed");
             this.Property(t => t.Answer).HasColumnName("Answer");
             this.Property(t => t.ExecutionTime).HasColumnName("ExecutionTime");
             this.Property(t => t.EndTime).HasColumnName("EndTime");
             this.Property(t => t.Point).HasColumnName("Point");
+            this.Property(t => t.AccumulatedPoints).HasColumnName("AccumulatedPoints");
 
             // Relationships
             this.HasOptional(t => t.tblAccount)

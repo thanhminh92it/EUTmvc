@@ -198,6 +198,7 @@
     <Compile Include="Models\Home\AccountModel.cs" />
     <Compile Include="Models\Home\EmailModel.cs" />
     <Compile Include="Models\Home\ExamModel.cs" />
+    <Compile Include="Models\Home\ExamModel1.cs" />
     <Compile Include="Models\Home\FileClass.cs" />
     <Compile Include="Models\Home\NewsModel.cs" />
     <Compile Include="Models\Mapping\sysdiagramMap.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Models\Mapping\tblAreaMap.cs" />
     <Compile Include="Models\Mapping\tblAuthorityMap.cs" />
     <Compile Include="Models\Mapping\tblCategoryMap.cs" />
+    <Compile Include="Models\Mapping\tblChallengeMap.cs" />
     <Compile Include="Models\Mapping\tblCountryMap.cs" />
     <Compile Include="Models\Mapping\tblDegreeMap.cs" />
     <Compile Include="Models\Mapping\tblDistrictMap.cs" />
@@ -220,6 +222,7 @@
     <Compile Include="Models\Mapping\tblResultMap.cs" />
     <Compile Include="Models\Mapping\tblSchoolMap.cs" />
     <Compile Include="Models\Mapping\tblStatusAccountMap.cs" />
+    <Compile Include="Models\Mapping\tblStructContentMap.cs" />
     <Compile Include="Models\Mapping\tblSubtestMap.cs" />
     <Compile Include="Models\Mapping\tblSuggestionMap.cs" />
     <Compile Include="Models\sysdiagram.cs" />
@@ -227,6 +230,7 @@
     <Compile Include="Models\tblArea.cs" />
     <Compile Include="Models\tblAuthority.cs" />
     <Compile Include="Models\tblCategory.cs" />
+    <Compile Include="Models\tblChallenge.cs" />
     <Compile Include="Models\tblCountry.cs" />
     <Compile Include="Models\tblDegree.cs" />
     <Compile Include="Models\tblDistrict.cs" />
@@ -242,14 +246,17 @@
     <Compile Include="Models\tblResult.cs" />
     <Compile Include="Models\tblSchool.cs" />
     <Compile Include="Models\tblStatusAccount.cs" />
+    <Compile Include="Models\tblStructContent.cs" />
     <Compile Include="Models\tblSubtest.cs" />
     <Compile Include="Models\tblSuggestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Captcha.cs" />
     <Compile Include="Utils\ChuanHoa.cs" />
     <Compile Include="Utils\ConvertToHtml.cs" />
+    <Compile Include="Utils\ListRandom.cs" />
     <Compile Include="Utils\Md5.cs" />
     <Compile Include="Utils\Pager.cs" />
+    <Compile Include="Utils\Papers.cs" />
     <Compile Include="Utils\SendEmail.cs" />
     <Compile Include="Utils\Uploader.cs" />
   </ItemGroup>
@@ -1219,6 +1226,7 @@
     <Content Include="Scripts\knockout-3.2.0.js" />
     <Content Include="Scripts\ladda.js" />
     <Content Include="Scripts\ladda.min.js" />
+    <Content Include="Scripts\loadCategory.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.ar.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.az.js" />
     <Content Include="Scripts\locales\bootstrap-datepicker.bg.js" />
@@ -1363,6 +1371,8 @@
     <Content Include="Views\Exam\ExamEnglish.cshtml" />
     <Content Include="Views\Exam\ExamResult.cshtml" />
     <Content Include="Views\Exam\ExamAnswer.cshtml" />
+    <Content Include="Views\Exam\BanDamKhong.cshtml" />
+    <Content Include="Views\Exam\Papers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

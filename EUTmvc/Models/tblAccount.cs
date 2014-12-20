@@ -21,7 +21,7 @@ namespace EUTmvc.Models
         public Nullable<System.DateTime> NewTime { get; set; }
         public int GroupAcountId { get; set; }
         public int PersonId { get; set; }
-        public Nullable<double> Point { get; set; }
+        public Nullable<int> AccumulatedPoints { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }

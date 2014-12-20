@@ -8,19 +8,18 @@ namespace EUTmvc.Models
         public tblExamStruct()
         {
             this.tblExamQuestions = new List<tblExamQuestion>();
+            this.tblStructContents = new List<tblStructContent>();
         }
 
         public int Id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
-        public string Title { get; set; }
-        public Nullable<int> Year { get; set; }
         public Nullable<int> FormId { get; set; }
         public Nullable<int> GradeId { get; set; }
-        public Nullable<int> HardNumber { get; set; }
-        public Nullable<int> AverageNumber { get; set; }
         public Nullable<int> EasyNumber { get; set; }
-        public Nullable<int> AllTime { get; set; }
+        public Nullable<int> AverageNumber { get; set; }
+        public Nullable<int> HardNumber { get; set; }
+        public Nullable<int> CategoryNumber { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
@@ -30,5 +29,6 @@ namespace EUTmvc.Models
         public virtual ICollection<tblExamQuestion> tblExamQuestions { get; set; }
         public virtual tblForm tblForm { get; set; }
         public virtual tblGrade tblGrade { get; set; }
+        public virtual ICollection<tblStructContent> tblStructContents { get; set; }
     }
 }

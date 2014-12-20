@@ -1,0 +1,139 @@
+﻿@using EUTmvc.Models
+@model EUTmvc.Utils.FormInfo
+@{
+    ViewBag.Title = "Bạn Dám Không";
+    var a = AccountModel.AccountInfo((string)Session["Account"]);
+}
+<script src="~/Scripts/loadCategory.js"></script>
+<script>
+    $(document).ready(function () {
+        var point = $('#Point');
+
+        point.val(5);
+        point.change(function () {
+            var i = point.val();
+            if (i > 10 || i < 5) {
+                i = 5;
+                point.val(5);
+            }
+            $('#point').text(i * 3);
+        });
+    });
+</script>
+<div id="content">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h2 class="panel-title">Bạn dám không</h2>
+        </div>
+        <div class="panel-body">
+            <!-- Left -->
+            <div id="damkhong_left">
+                <div>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        @Html.HiddenFor(m => m.Id)
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Điểm thành tích:</label>
+                            <label class="col-sm-5 control-label">
+                                @if (a == null)
+                                {
+                                    <span>0</span>
+                                }
+                                else
+                                {
+                                    @a.AccumulatedPoints
+                                }
+
+
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Lựa chọn môn học</label>
+                            <div class="col-sm-5">
+                                @Html.DropDownListFor(m => m.Subtest.SelectSubtest, new SelectList(Model.Subtest.subtests, "Value", "Text"), "Chọn Môn Thi", new { @class = "form-control" })
+
+                                <small class="help-block">
+                                    @Html.ValidationMessageFor(m => m.Subtest.SelectSubtest)
+                                </small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                @Html.DropDownListFor(m => m.Category.SelectCategory, new SelectList(""), "Chọn Nội Dung Thi", new { @class = "form-control", @disabled = "" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Cược điểm thành tích</label>
+                            <div class="col-sm-5">
+                                @Html.TextBoxFor(m => m.Point, new { @type = "number", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Nếu thắng bạn có</label>
+                            <label class="col-sm-5 control-label" id="point">15</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Số lượng câu hỏi</label>
+                            <label class="col-sm-5 control-label">
+                                @Html.DisplayFor(m => m.QuestionNumber)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Yêu cầu kết quả tối thiểu</label>
+                            <label class="col-sm-5 control-label">
+                                @Html.DisplayFor(m => m.Request)
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-7 control-label">Số lượng câu hỏi</label>
+                            <label class="col-sm-5 control-label">
+                                @Html.DisplayFor(m => m.Time) phút
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5 col-md-offset-3">
+                                <button type="submit" class="btn btn-default">Tham Gia Thử Thách</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <!-- Right -->
+            <div id="damkhong_right">
+                <label class="dk_label">Thể lệ chương trình</label>
+                <div class="damkhong_thele">
+                    - Người chơi chọn 1 trong các môn học Hóa học, vật lý, sinh học và tiếng anh.
+                    <br>
+                    - Hệ thống sẽ sinh ngẫu nhiên 1 đề bài có số lượng <strong>10 câu hỏi</strong>, phạm vi kiến thức tổng hợp trong lớp và chương tương ứng mà bạn lựa chọn <strong>10, 11, 12</strong>.
+                    <br>
+                    - Thời gian làm bài <strong>15 phút</strong>.
+                    <br>
+                    - Sau khi bạn nộp bài hệ thống sẽ kiểm tra đáp án bài làm của bạn để kết luận bạn chiến thắng hay thất bại.
+                    <br>
+                    - Mốc so sánh kết quả bài làm: <strong>8/10</strong>. Nếu đạt từ 8/10 câu hỏi đúng bạn sẽ chiến thắng còn nếu không bạn sẽ thất bại.
+                    <br>
+                    - <strong class="dong">Nếu chiến thắng</strong>: Bạn sẽ được nhận mức thưởng = số đểm thành tích đặt cược <strong>* 3</strong> và cộng vào điểm thành tích tổng.
+                    <br>
+                    - <strong class="money">Nếu thua</strong>: Bạn sẽ bị mất toàn bộ số điểm thành tích bạn mang ra đặt cược.
+                    <br>
+                    - Chương trình dành riêng cho thành viên <span class="user_vip">VIP</span> tham gia.
+                    <br>
+                    - Số lần tham gia: <strong>không hạn chế</strong>.
+                    <br>
+                    - Mức đặt cược tối thiểu: <strong>5 điểm thành tích</strong>.
+                    <br>
+                    - Mức đặt cược tối đa: <strong>10 điểm thành tích</strong>.
+                    <br>
+                </div>
+            </div>
+            <div class="damkhong_note">
+                - Điểm thành tích đạt được / mất đi không ảnh hưởng tới bảng xếp hạng. Chỉ ảnh hưởng tới điểm thành tích tổng
+                <br>
+                - Nếu có nhiều điểm thành tích, bạn có thể quy đổi sang ngày VIP theo chức năng đổi điểm thành tích =&gt; VIP trong trang cá nhân.
+               
+            </div>
+        </div>
+    </div>
+</div>

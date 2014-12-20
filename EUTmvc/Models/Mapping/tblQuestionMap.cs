@@ -14,6 +14,9 @@ namespace EUTmvc.Models.Mapping
             this.Property(t => t.Code)
                 .HasMaxLength(50);
 
+            this.Property(t => t.Answer)
+                .HasMaxLength(1);
+
             this.Property(t => t.Description)
                 .HasMaxLength(100);
 
@@ -27,9 +30,10 @@ namespace EUTmvc.Models.Mapping
             this.ToTable("tblQuestion");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Code).HasColumnName("Code");
-            this.Property(t => t.Contents).HasColumnName("Contents");
             this.Property(t => t.CategoryId).HasColumnName("CategoryId");
             this.Property(t => t.LevelId).HasColumnName("LevelId");
+            this.Property(t => t.FormId).HasColumnName("FormId");
+            this.Property(t => t.Contents).HasColumnName("Contents");
             this.Property(t => t.Answer).HasColumnName("Answer");
             this.Property(t => t.AnswerA).HasColumnName("AnswerA");
             this.Property(t => t.AnswerB).HasColumnName("AnswerB");
@@ -48,6 +52,9 @@ namespace EUTmvc.Models.Mapping
             this.HasOptional(t => t.tblCategory)
                 .WithMany(t => t.tblQuestions)
                 .HasForeignKey(d => d.CategoryId);
+            this.HasOptional(t => t.tblForm)
+                .WithMany(t => t.tblQuestions)
+                .HasForeignKey(d => d.FormId);
             this.HasOptional(t => t.tblLevel)
                 .WithMany(t => t.tblQuestions)
                 .HasForeignKey(d => d.LevelId);

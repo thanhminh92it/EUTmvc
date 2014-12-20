@@ -19,6 +19,9 @@ namespace EUTmvc.Models.Mapping
             this.ToTable("tblForm");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Description).HasColumnName("Description");
+            this.Property(t => t.QuestionNumber).HasColumnName("QuestionNumber");
+            this.Property(t => t.Time).HasColumnName("Time");
+            this.Property(t => t.Request).HasColumnName("Request");
         }
     }
 }

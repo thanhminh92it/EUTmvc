@@ -2,93 +2,118 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using EUTmvc.Utils;
 
 namespace EUTmvc.Models.Home
 {
-    public class ExamStart
+    public class ExamModel
     {
-        static EUTContext db = new EUTContext();
-        public static Exam LoadExam(int id)
+        public tblForm LoadForm(int id)
         {
-            Exam exam = new Exam();
-            var dbExamStruct = db.tblExamStructs.Find(id);
-            var dbExamQuestion = db.tblExamQuestions.Where(q => q.ExamStructId == id);
-            exam.ID = dbExamStruct.Id;
-            exam.Code = dbExamStruct.Code;
-            exam.Name = dbExamStruct.Name;
-            exam.Title = dbExamStruct.Title;
-            exam.GradeName = dbExamStruct.tblGrade.Name;
-            exam.AllTime = dbExamStruct.AllTime;
-            exam.Description = dbExamStruct.Description;
-            exam.CreateBy = dbExamStruct.CreatedBy;
-            foreach(var item in dbExamQuestion)
+            var db = new EUTContext();
+            var model = db.tblForms.Find(id);
+            db.Dispose();
+            return model;
+        }
+        public Papers BanDamKhong(int id)
+        {
+            var p = new Papers();
+            var db = new EUTContext();
+            var model = db.tblExamStructs.FirstOrDefault(a => a.FormId == 4 && a.CategoryNumber == 1);
+            if (model != null)
             {
-                exam.Subtest = item.tblQuestion.tblCategory.tblSubtest.Name;
-                var q = new Question();
-                q.ID = item.tblQuestion.Id;
-                q.Contents = item.tblQuestion.Contents;
-                q.Answer = item.tblQuestion.Answer;
-                q.AnswerA = item.tblQuestion.AnswerA;
-                q.AnswerB = item.tblQuestion.AnswerB;
-                q.AnswerC = item.tblQuestion.AnswerC;
-                q.AnswerD = item.tblQuestion.AnswerD;
-                if (string.IsNullOrEmpty(Convert.ToString(item.tblQuestion.SuggestionId)))
-                {
-                    q.Suggestion = null;
-                }
-                else
-                {
-                    q.Suggestion = item.tblQuestion.tblSuggestion.Description;
-                    q.SuggestionID = item.tblQuestion.tblSuggestion.Id;
-                }
-                exam.ListQuestion.Add(q);
-            }
-            return exam;
-        }
-        internal static void LoadExam()
-        {
-            throw new NotImplementedException();
-        }
-        public static ExamResult LoadExamResult(string Answer)
-        {
-            ExamResult a = new ExamResult();
-            a.Answer = Answer;
-            return a;
-        }
-    }
-    public class Exam
-    {   
-        public int ID { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Title { get; set; }
-        public List<Question> ListQuestion { get; set; }
-        public string GradeName { get; set; }
-        public int? AllTime { get; set; }
-        public string Description { get; set; }
-        public string CreateBy { get; set; }
-        public string Subtest { get; set; }
 
-        public Exam()
+            }
+            return null;
+        }
+
+        public int Begin(FormInfo formInfo)
         {
-            ListQuestion = new List<Question>();
+            var db = new EUTContext();
+            var q = db.tblStructContents.FirstOrDefault(a => a.CategoryId == formInfo.Category.SelectCategory && a.tblExamStruct.FormId == formInfo.Id);
+            int ExamStructId = 0;
+            int ExamQuestionId = 0;
+            if (q != null)
+            {
+                ExamStructId = q.ExamStructId;
+            }
+            var question = db.tblExamQuestions.FirstOrDefault(a => a.ExamStructId == ExamStructId);
+            if (question != null)
+            {
+                ExamQuestionId = question.Id;
+            }
+            var c = new tblChallenge
+            {
+                AccountId = AccountModel.AccountId(formInfo.Account),
+                AccumulatedPoints = formInfo.Point,
+                CategoryId = formInfo.Category.SelectCategory,
+                ExamQuestionId = ExamQuestionId,
+                CreatedBy = formInfo.Account,
+                CreatedDate = DateTime.Now
+            };
+            db.tblChallenges.Add(c);
+            db.SaveChanges();
+            db.Dispose();
+            return ExamQuestionId;
+        }
+
+        public bool CheckPoint(FormInfo formInfo)
+        {
+            var a = AccountModel.AccountInfo(formInfo.Account);
+            if (a != null)
+            {
+                if (a.AccumulatedPoints > formInfo.Point)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static Papers LoadPapers(int id)
+        {
+            var db = new EUTContext();
+            var examQuestions = db.tblExamQuestions.Find(id);
+            if (examQuestions != null)
+            {
+                var papers = new Papers()
+                {
+                    Id = id,
+                    Time = examQuestions.tblExamStruct.tblForm.Time,
+                };
+                var str = examQuestions.QuestionId.Split(';');
+                foreach (var s in str)
+                {
+                    var q = db.tblQuestions.Find(int.Parse(s));
+                    papers.Questions.Add(LoadQuestion(q));
+                }
+                var listRandom = new ListRandom();
+                papers = listRandom.List(papers);
+                papers.seed = listRandom.seed;
+                return papers;
+            }
+            return null;
+        }
+
+        public static Question LoadQuestion(tblQuestion q)
+        {
+            if (q != null)
+            {
+                var question = new Question()
+                {
+                    Id = q.Id,
+                    Text = q.Contents,
+                    TrueAnswer = q.Answer
+                };
+                question.Answers.Add(new Answer() { Value = "A", Text = q.AnswerA });
+                question.Answers.Add(new Answer() { Value = "B", Text = q.AnswerB });
+                question.Answers.Add(new Answer() { Value = "C", Text = q.AnswerC });
+                question.Answers.Add(new Answer() { Value = "D", Text = q.AnswerD });
+                return question;
+            }
+            return null;
         }
     }
-    public class Question
-    {
-        public int ID { get; set; }
-        public string Contents { get; set; }
-        public string Answer { get; set; }
-        public string AnswerA { get; set; }
-        public string AnswerB { get; set; }
-        public string AnswerC { get; set; }
-        public string AnswerD { get; set; }
-        public string Suggestion { get; set; }
-        public int? SuggestionID { get; set; }
-        public string SelectedAnswer { get; set; }
-    }
-    public class ExamResult
-    {
-        public string Answer { get; set; }
-    }
+
+
 }

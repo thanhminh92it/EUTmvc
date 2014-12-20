@@ -165,7 +165,8 @@ namespace EUTmvc.Models
                     DateOfBirth = m.tblPerson.DateOfBirth == null ? null : String.Format("{0:MM/dd/yyyy}", m.tblPerson.DateOfBirth),
                     Sex = m.tblPerson.Sex,
                     Address = m.tblPerson.Address,
-                    PhoneNumber = m.tblPerson.PhoneNumber
+                    PhoneNumber = m.tblPerson.PhoneNumber,
+                    AccumulatedPoints = m.AccumulatedPoints ?? 0
                 };
             }
             return null;
@@ -219,6 +220,16 @@ namespace EUTmvc.Models
         {
             var model = db.tblAccounts.FirstOrDefault(a => a.Account.Equals(account));
             return model;
+        }
+
+        public static int AccountId(string account)
+        {
+            var a = Account(account);
+            if (a != null)
+            {
+                return a.Id;
+            }
+            return 0;
         }
     }
 
@@ -338,5 +349,8 @@ namespace EUTmvc.Models
 
         [Display(Name = "Avatar")]
         public HttpPostedFileBase File { get; set; }
+
+        [Display(Name = "Điểm Tích Lũy")]
+        public int? AccumulatedPoints { get; set; }
     }
 }
