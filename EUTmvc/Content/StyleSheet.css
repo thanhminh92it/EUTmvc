@@ -580,6 +580,42 @@ ul {
     margin-left: 4px;
     padding: 3px 12px !important;
 }
+
 .countdown-section {
     width: 31.5% !important;
+}
+
+#damkhong_left {
+    background: none repeat scroll 0 0 #eee;
+    border: 1px solid #e7b2a1;
+    float: left;
+    padding: 10px 0 10px;
+    width: 355px;
+}
+
+#damkhong_right {
+    border: 5px dotted #00bae9;
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 290px;
+}
+
+.damkhong_note {
+    background: none repeat scroll 0 0 #0fa279;
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+#damkhong_left .form-group {
+    border-bottom: 1px dotted #b3b3b3;
+    padding-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
 }
