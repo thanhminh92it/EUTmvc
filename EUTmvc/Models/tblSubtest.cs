@@ -8,6 +8,7 @@ namespace EUTmvc.Models
         public tblSubtest()
         {
             this.tblCategories = new List<tblCategory>();
+            this.tblExamStructs = new List<tblExamStruct>();
         }
 
         public int Id { get; set; }
@@ -20,5 +21,6 @@ namespace EUTmvc.Models
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<int> ModifiedCount { get; set; }
         public virtual ICollection<tblCategory> tblCategories { get; set; }
+        public virtual ICollection<tblExamStruct> tblExamStructs { get; set; }
     }
 }

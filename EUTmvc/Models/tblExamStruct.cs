@@ -32,6 +32,7 @@ namespace EUTmvc.Models
         public Nullable<int> ModifiedCount { get; set; }
         public virtual ICollection<tblExamQuestion> tblExamQuestions { get; set; }
         public virtual tblForm tblForm { get; set; }
+        public virtual tblSubtest tblSubtest { get; set; }
         public virtual ICollection<tblStructContent> tblStructContents { get; set; }
     }
 }

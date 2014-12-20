@@ -65,9 +65,9 @@ namespace EUTmvc.Utils
                 if (model != null)
                 {
                     Description = model.Description;
-                    QuestionNumber = model.QuestionNumber;
-                    Time = model.Time;
-                    Request = model.Request;
+                    //QuestionNumber = model.QuestionNumber;
+                    //Time = model.Time;
+                    //Request = model.Request;
                 }
             }
             Subtest = new Subtests();

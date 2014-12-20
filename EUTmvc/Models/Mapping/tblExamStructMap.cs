@@ -54,6 +54,9 @@ namespace EUTmvc.Models.Mapping
             this.HasOptional(t => t.tblForm)
                 .WithMany(t => t.tblExamStructs)
                 .HasForeignKey(d => d.FormId);
+            this.HasOptional(t => t.tblSubtest)
+                .WithMany(t => t.tblExamStructs)
+                .HasForeignKey(d => d.SubtestId);
 
         }
     }

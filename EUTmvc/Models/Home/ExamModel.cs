@@ -79,7 +79,7 @@ namespace EUTmvc.Models.Home
                 var papers = new Papers()
                 {
                     Id = id,
-                    Time = examQuestions.tblExamStruct.tblForm.Time,
+                    Time = examQuestions.tblExamStruct.Time,
                 };
                 var str = examQuestions.QuestionId.Split(';');
                 foreach (var s in str)

@@ -198,7 +198,6 @@
     <Compile Include="Models\Home\AccountModel.cs" />
     <Compile Include="Models\Home\EmailModel.cs" />
     <Compile Include="Models\Home\ExamModel.cs" />
-    <Compile Include="Models\Home\ExamModel1.cs" />
     <Compile Include="Models\Home\FileClass.cs" />
     <Compile Include="Models\Home\NewsModel.cs" />
     <Compile Include="Models\Mapping\sysdiagramMap.cs" />
@@ -288,7 +287,6 @@
     <Content Include="Content\plugins\social-buttons.css" />
     <Content Include="Content\plugins\timeline.css" />
     <Content Include="Content\sb-admin-2.css" />
-    <Content Include="Content\style123.css" />
     <Content Include="Content\StyleSheet.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -1368,11 +1366,11 @@
     <Content Include="Views\File\Index.cshtml" />
     <Content Include="Views\Shared\Parital\_Banner.cshtml" />
     <Content Include="Views\Exam\Index.cshtml" />
-    <Content Include="Views\Exam\ExamEnglish.cshtml" />
     <Content Include="Views\Exam\ExamResult.cshtml" />
     <Content Include="Views\Exam\ExamAnswer.cshtml" />
     <Content Include="Views\Exam\BanDamKhong.cshtml" />
     <Content Include="Views\Exam\Papers.cshtml" />
+    <Content Include="Views\Exam\ExamGlobal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
